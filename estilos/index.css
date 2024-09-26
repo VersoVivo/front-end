@@ -1,0 +1,29 @@
+/* Remove a formatação padrão do navegador */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*Inserir fonte*/
+
+/* Paleta de Cores */
+:root {
+    --azulEscuro: #0C1D25;
+    --azulClaro: #104C64;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
+.rodapeSuperior {
+    background-color: var(--azulEscuro);
+    padding: 20px;
+}
+.rodapeInferior {
+    background-color: var(--azulClaro);
+}
+.rodapeInferior p {
+    color: white;
+    padding: 5px 0;
+}
