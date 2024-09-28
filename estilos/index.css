@@ -20,7 +20,33 @@
     --laranja: #BF4410;
 }
 
+/* html */
+html {
+  height: 100%;
+}
+
+/* Body */
+/* body {
+  background: rgb(12,29,37);
+  background: linear-gradient(34deg, rgba(12,29,37,1) 64%, rgba(14,107,150,1) 100%);
+
+  Junto com o html, faz com que o fundo ocupe 100% da tela e não se repita
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+} 
+*/
+body {
+  background-color: var(--azulEscuro);
+}
+
 /* Header */
+.banner img {
+  width: 100%;
+  margin-top: -20px;
+}
+
 
 /* Nav */
 nav {
@@ -42,8 +68,8 @@ nav {
 
 /* Barra de Pesquisa */
 .search {
-  --input-line: black;
-  --input-text-color: #636363;
+  --input-line: white;
+  --input-text-color: white;
   --input-text-hover-color: transparent;
   --input-border-color: #ffffff30;
   --input-border-hover-color: #24242430;
@@ -163,15 +189,44 @@ nav {
 /* Main */
 main {
     position: relative;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
 }
 
+.cantoEsquerdo {
+  background: rgb(191,68,16);
+  background: linear-gradient(200deg, rgba(191,68,16,1) 50%, rgba(89,32,7,1) 100%);
+  
+  height: 400px;
+}
+.cantoDireito {
+  background: rgb(32,154,202);
+  background: linear-gradient(200deg, rgb(23, 120, 158) 0%, rgba(18,65,84,1) 40%, rgba(12,29,37,1) 100%);
+
+  height: 400px;
+}
+
+/*Mapa do Rap*/
+.mapaRap {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.conteudo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fundoLaranja {
+  text-align: end;
+}
 
 
 /* Footer */
 footer {
     text-align: center;
-    position: fixed; /*Verificar isso*/
+    /* position: fixed; Verificar isso */
     bottom: 0;
     width: 100%;
 }
