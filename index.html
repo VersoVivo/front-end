@@ -32,12 +32,11 @@
 
         <!-- Logo -->
         <a class="navbar-brand" href="index.html">
-          <img src="imagens/logo.svg" alt="Logo: VersoVivo" title="Logo: VersoVivo" class="d-inline-block align-text-top">
+          <img src="imagens/logo.svg" alt="Logo: VersoVivo" title="Logo: VersoVivo" class="d-inline-block align-text-top img-fluid">
         </a>
 
         <!-- Toggle button for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -74,9 +73,17 @@
             </div>
           </form>
 
+          <div id="idBarraOculta" class="barraOculta">
+            <a href="javascript:void(0)" id="fecharConfig" class="fecharBarraOculta">Fechar</a>
+            <a href="#">A</a>
+            <a href="#">B</a>
+            <a href="#">C</a>
+            <a href="#">D</a>
+          </div>
+
           <!-- User Icon -->
           <div class="navbar-text">
-            <img src="imagens/iconeUser.svg" alt="Icone: Usuário" class="rounded-circle">
+            <span id="abrirConfig"><img src="imagens/iconeUser.svg" alt="Icone: Usuário" class="rounded-circle" style="cursor: pointer;"></span>
           </div>
         </div>
       </div>
@@ -111,20 +118,24 @@
       <p>Mapa do Rap</p>
       <div>Mapa</div>
     </div>
-    <div class="fundoLaranja"><img src="imagens/fundoLaranja.png" alt="" class="imagemDireita"></div>
+    <div class="fundoLaranja">
+      <!-- deixar responsiva -->
+      <img src="imagens/fundoLaranja.png" alt="Fundo Laranja" class="imagemDireita" id="fundoLaranja">
+    </div>
   </div>
   </main>
 
   <!-- Rodapé -->
   <footer>
     <div class="rodapeSuperior">
-      <a href="https://github.com/VersoVivo" target="_blank"><img src="imagens/github.svg" alt="Icone do GitHub"
-          title="Venha Ver Nosso Repositório no GitHub"></a>
+      <a href="https://github.com/VersoVivo" target="_blank"><img src="imagens/github.svg" alt="Icone do GitHub" title="Venha Ver Nosso Repositório no GitHub"></a>
     </div>
     <div class="rodapeInferior">
       <p><strong>Projeto Integrador - Senac Tito - TI43</strong></p>
     </div>
   </footer>
+  
+  <script src="scripts/index.js"></script>
 
   <!-- JS Bootstrap atualizado de 3.4.1 para 3.6.1 segurança -->
   <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
@@ -132,5 +143,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
 </body>
-
 </html>
