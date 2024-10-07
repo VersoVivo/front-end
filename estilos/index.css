@@ -293,6 +293,7 @@ main {
   text-align: end;
   pointer-events: none;
   user-select: none;
+  position: relative;
 }
 
 .imagemDireita {
