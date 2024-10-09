@@ -25,20 +25,9 @@ html {
   height: 100%;
 }
 
-/* Body */
-/* body {
-  background: rgb(12,29,37);
-  background: linear-gradient(34deg, rgba(12,29,37,1) 64%, rgba(14,107,150,1) 100%);
-
-  Junto com o html, faz com que o fundo ocupe 100% da tela e não se repita
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-} 
-*/
 body {
-  background-color: var(--azulEscuro);
+  background-color: rgb(16,76,100);
+  background: linear-gradient(347deg, var(--azulClaro) 0%, var(--azulEscuro) 50%, var(--azulEscuro) 100%);
   font-family: "roboto", "montserrat", sans-serif;
 }
 
@@ -231,6 +220,13 @@ main {
 }
 
 .areaBatalhas {
+  background-image: url("../imagens/fundoColunas.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  height: 100vh;
+
   display: flex;
   padding: 0; /* Remover padding do contêiner */
   margin-left: 24%;
@@ -238,44 +234,10 @@ main {
 
 .cardEventos {
   background-color: #d9d9d94a;
-  width: 20%; /* Largura dos cartões */
-  margin: 0 10px; /* Adicionar margem lateral para espaço entre os cartões */
-  height: 400px; /* Altura fixa dos cartões */
-  flex-shrink: 0; /* Impedir que os cartões encolham */
-  display: flex; /* Adicionar flexbox para alinhar o conteúdo */
-  flex-direction: column; /* Organizar conteúdo em coluna */
-  justify-content: space-between; /* Espaçamento uniforme entre itens */
+  width: 20%;
+  height: auto;
+  z-index: 10;
 }
-
-/* Para garantir que os cartões não excedam o contêiner */
-.carousel-inner {
-  padding: 0 20px; /* Espaço nos lados do contêiner */
-}
-
-.carousel-indicators {
-  bottom: 10px; /* Ajuste a posição vertical dos indicadores */
-}
-
-.carousel-indicators li {
-  background-color: #000; /* Cor das bolinhas */
-  border-radius: 50%; /* Para deixar redondas */
-  width: 10px; /* Largura das bolinhas */
-  height: 10px; /* Altura das bolinhas */
-}
-
-.carousel-indicators .active {
-  background-color: #fff; /* Cor da bolinha ativa */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5); /* Cor do fundo das setas */
-  border-radius: 50%; /* Deixar as setas redondas */
-}
-
-
-
-
 
 /* Responsividade da Area de Batalhas */
         @media (max-width: 1200px) {
@@ -302,22 +264,18 @@ main {
       }
 
 
+/*Mapa do Rap*/
+.mapaRap {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
 .conteudo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.fundoLaranja {
-  text-align: end;
-  pointer-events: none;
-  user-select: none;
-  position: relative;
-}
-
-.imagemDireita {
-  width: 70%;
-  height: auto;
 }
 
 /* Footer */
@@ -327,9 +285,6 @@ footer {
     width: 100%;
 }
 .rodapeSuperior {
-    background-color: var(--azulEscuro);
-    padding: 20px;
-
     background-color: var(--azulEscuro);
     padding: 20px;
     margin: 0;
