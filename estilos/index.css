@@ -25,18 +25,6 @@ html {
   height: 100%;
 }
 
-/* Body */
-/* body {
-  background: rgb(12,29,37);
-  background: linear-gradient(34deg, rgba(12,29,37,1) 64%, rgba(14,107,150,1) 100%);
-
-  Junto com o html, faz com que o fundo ocupe 100% da tela e não se repita
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-} 
-*/
 body {
   background-color: var(--azulEscuro);
   font-family: "roboto", "montserrat", sans-serif;
@@ -231,7 +219,6 @@ main {
 }
 
 .areaBatalhas {
-  background-image: url("../imagens/fundoColunas.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -248,7 +235,6 @@ main {
   background-color: #d9d9d94a;
   width: 20%;
   height: auto;
-  z-index: 10;
 }
 
 /* Responsividade da Area de Batalhas */
@@ -281,6 +267,8 @@ main {
   position: relative;
   text-align: center;
   color: white;
+
+  margin-top: 600px;
 }
 
 .conteudo {
@@ -288,17 +276,6 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.fundoLaranja {
-  text-align: end;
-  pointer-events: none;
-  user-select: none;
-  position: relative;
-}
-
-.imagemDireita {
-  width: 70%;
-  height: auto;
 }
 
 /* Footer */
@@ -308,9 +285,6 @@ footer {
     width: 100%;
 }
 .rodapeSuperior {
-    background-color: var(--azulEscuro);
-    padding: 20px;
-
     background-color: var(--azulEscuro);
     padding: 20px;
     margin: 0;
