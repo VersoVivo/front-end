@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!-- d -->
+
 <head>
   <!-- Meta Tags relacionado a SEO -->
   <meta charset="UTF-8">
@@ -38,11 +38,10 @@
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
 
-        <!-- Logo -->
         <a class="navbar-brand" href="index.html">
-          <img src="imagens/logo.svg" alt="Logo: VersoVivo" title="Logo: VersoVivo"
-            class="d-inline-block align-text-top img-fluid">
-        </a>
+          <img src="imagens/logo.svg" alt="Logo: VersoVivo" title="Logo: VersoVivo" class="d-inline-block align-text-top img-fluid">
+      </a>
+      
 
         <!-- Toggle button for mobile view -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -111,63 +110,101 @@
   <!-- Fim Cabeçalho -->
 
   <main>
-    <!-- Inicio Batalhas -->
-    <div class="areaBatalhas">
-      <!-- Inicio Div de Eventos -->
-      <div class="card cardEventos">
-        <a href="#">
-          <img class="card-img-top" src="" alt="Image">
-          <div class="card-body">
-            <h5 class="card-title">Batalha da Norte</h5>
-            <p class="card-text">Data Hora</p>
-            <p class="card-text">Local</p>
-          </div>
-        </a>
-      </div>
-      <!-- Fim Div de Eventos -->
+  <!-- Início Batalhas -->
+<div id="battlesCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+  <div class="carousel-inner">
 
-      <div class="card cardEventos">
-        <a href="#">
-          <img class="card-img-top" src="" alt="Image">
-          <div class="card-body">
-            <h5 class="card-title">Batalha da Norte</h5>
-            <p class="card-text">Data Hora</p>
-            <p class="card-text">Local</p>
-          </div>
-        </a>
-      </div>
-      <div class="card cardEventos">
-        <a href="#">
-          <img class="card-img-top" src="" alt="Image">
-          <div class="card-body">
-            <h5 class="card-title">Batalha da Norte</h5>
-            <p class="card-text">Data Hora</p>
-            <p class="card-text">Local</p>
-          </div>
-        </a>
-      </div>
-      <div class="card cardEventos">
-        <a href="#">
-          <img class="card-img-top" src="" alt="Image">
-          <div class="card-body">
-            <h5 class="card-title">Batalha da Norte</h5>
-            <p class="card-text">Data Hora</p>
-            <p class="card-text">Local</p>
-          </div>
-        </a>
-      </div>
-      <div class="card cardEventos">
-        <a href="#">
-          <img class="card-img-top" src="" alt="Image">
-          <div class="card-body">
-            <h5 class="card-title">Batalha da Norte</h5>
-            <p class="card-text">Data Hora</p>
-            <p class="card-text">Local</p>
-          </div>
-        </a>
+    <div class="carousel-item active">
+      <div class="areaBatalhas">
+        <div class="card cardEventos">
+          <a href="#">
+            <img class="card-img-top" src="" alt="Image">
+            <div class="card-body">
+              <h5 class="card-title">Batalha do Norte 1</h5>
+              <p class="card-text">Data Hora</p>
+              <p class="card-text">Local</p>
+            </div>
+          </a>
+        </div>
+        <div class="card cardEventos">
+          <a href="#">
+            <img class="card-img-top" src="" alt="Image">
+            <div class="card-body">
+              <h5 class="card-title">Batalha do Norte 2</h5>
+              <p class="card-text">Data Hora</p>
+              <p class="card-text">Local</p>
+            </div>
+          </a>
+        </div>
+        <div class="card cardEventos">
+          <a href="#">
+            <img class="card-img-top" src="" alt="Image">
+            <div class="card-body">
+              <h5 class="card-title">Batalha do Norte 3</h5>
+              <p class="card-text">Data Hora</p>
+              <p class="card-text">Local</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
-    <!-- Fim Batalhas -->
+    <div class="carousel-item">
+      <div class="areaBatalhas">
+        <div class="card cardEventos">
+          <a href="#">
+            <img class="card-img-top" src="" alt="Image">
+            <div class="card-body">
+              <h5 class="card-title">Batalha do Norte 4</h5>
+              <p class="card-text">Data Hora</p>
+              <p class="card-text">Local</p>
+            </div>
+          </a>
+        </div>
+        <div class="card cardEventos">
+          <a href="#">
+            <img class="card-img-top" src="" alt="Image">
+            <div class="card-body">
+              <h5 class="card-title">Batalha do Norte 5</h5>
+              <p class="card-text">Data Hora</p>
+              <p class="card-text">Local</p>
+            </div>
+          </a>
+        </div>
+        <div class="card cardEventos">
+          <a href="#">
+            <img class="card-img-top" src="" alt="Image">
+            <div class="card-body">
+              <h5 class="card-title">Batalha do Norte 6</h5>
+              <p class="card-text">Data Hora</p>
+              <p class="card-text">Local</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Indicadores -->
+  <ol class="carousel-indicators">
+    <li data-target="#battlesCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#battlesCarousel" data-slide-to="1"></li>
+  </ol>
+
+  <a class="carousel-control-prev" href="#battlesCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
+  <a class="carousel-control-next" href="#battlesCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
+</div>
+<!-- Fim Batalhas -->
+
+
+
+
+
 
     <!-- Inicio Mapa do Rap (Criar um arquivo a parte quando for inserir PHP) -->
     <style>
@@ -233,5 +270,14 @@
   <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
 
   <script src="scripts/index.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- jQuery e Bootstrap JS (coloque isso no final do seu arquivo HTML) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
