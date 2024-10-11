@@ -220,13 +220,13 @@ main {
 }
 
 .areaBatalhas {
-  background-image: url("../imagens/fundoColunas.svg");
+  /* background-image: url("../imagens/fundoColunas.svg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding: 30px;
   height: 100vh;
-
+  gap: 20px;
   display: flex;
   padding: 0; /* Remover padding do contêiner */
   margin-left: 24%;
@@ -234,8 +234,11 @@ main {
 
 .cardEventos {
   background-color: #d9d9d94a;
+  padding: 3%;
+  justify-content: space-between; /*espaço entre os cards*/
   width: 20%;
-  height: auto;
+  gap: 2px; /*espaço entre os cards*/
+  height: 40%;
   z-index: 10;
 }
 
@@ -255,6 +258,12 @@ main {
           .cardEventos {
               flex: 1 1 calc(50% - 20px);
           }
+
+          .areaBatalhas {
+            
+            padding: 0 20px;
+            margin-left: 0%;
+        }
       }
 
       @media (max-width: 576px) {
@@ -339,7 +348,6 @@ footer {
       width: 80%; /* Ajuste o valor conforme necessário */
   }
 }
-
 
 
 
