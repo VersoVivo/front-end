@@ -1,7 +1,7 @@
 /* Remove a formatação padrão do navegador */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0; /*sem margin*/
+    padding: 0; /*sem espaçamento*/
 }
 
 /* Fontes */
@@ -15,26 +15,27 @@
 
 /* Paleta de Cores */
 :root {
-    --azulEscuro: #0C1D25;
+    --azulEscuro: #0C1D25; 
     --azulClaro: #104C64;
     --laranja: #BF4410;
+    /*cores gravadas automática*/
 }
 
 /* html */
 html {
-  height: 100%;
+  height: 100%; /*altura*/
 }
 
 body {
-  background-color: rgb(16,76,100);
-  background: linear-gradient(347deg, var(--azulClaro) 0%, var(--azulEscuro) 50%, var(--azulEscuro) 100%);
-  font-family: "roboto", "montserrat", sans-serif;
+  background-color: rgb(16,76,100); /*cor de fundo*/
+  background: linear-gradient(347deg, var(--azulClaro) 0%, var(--azulEscuro) 50%, var(--azulEscuro) 100%); /*cores em gradiente (tipo arco-íris)*/
+  font-family: "roboto", "montserrat", sans-serif; /*fonte específica*/
 }
 
 /* Header */
 .banner img {
-  width: 100%;
-  margin-top: -20px;
+  width: 100%; /*largura*/
+  margin-top: -20px; 
 }
 
 /* Nav */
@@ -100,8 +101,6 @@ nav {
   --input-line: white;
   --input-text-color: white;
   --input-text-hover-color: transparent;
-  --input-border-color: #ffffff30;
-  --input-border-hover-color: #24242430;
   --input-bg-color: #ffffff30;
   --search-max-width: 250px;
   --search-min-width: 150px;
@@ -124,12 +123,14 @@ nav {
   border-color: var(--input-border-hover-color);
 }
 
-/*Section input*/
+/*Sessão do input*/
 .search-field {
   position: relative;
   width: 100%;
   height: 100%;
   left: -5px;
+  margin-left: 1%;
+  --input-bg-color: #ffffff00;
   border: 0;
 }
 
@@ -170,7 +171,7 @@ nav {
   color: var(--input-text-hover-color);
 }
 
-/*Search button*/
+/*Botão de pesquisa*/
 .search-box-icon {
   width: 52px;
   height: 35px;
@@ -233,14 +234,58 @@ main {
 }
 
 .cardEventos {
-  background-color: #d9d9d94a;
+  background-color: rgb(123, 123, 123);
   padding: 3%;
   justify-content: space-between; /*espaço entre os cards*/
   width: 20%;
   gap: 2px; /*espaço entre os cards*/
-  height: 40%;
+  height: 45%;
+  border-radius: 10%;
   z-index: 10;
+  /* text-decoration: none; remove sublinhado */
+}   
+
+.card-img-top {
+
+ width: 145%;
+ /* height: 60%; */
+ margin-top: -22%;
+ margin-left: -22%;
+ object-fit: cover; /* Faz a imagem cobrir todo o espaço disponível sem distorcer */
+ overflow: hidden; /* Esconde partes que saem do card */
+ display: block; /* Para evitar espaços indesejados */
+
 }
+
+.card {
+margin-right: 2%;  
+overflow: hidden; /* Esconde partes que saem do card */
+}
+
+.card-title {
+
+ font-size: 14px;
+ margin-top: -5%;
+ color: white;
+ text-decoration: none;
+}
+
+.card-text {
+
+ font-size: 12px;
+ margin-top: -5;
+ color: white;
+
+}
+
+.card-text2 {
+
+ margin-top: -7%;
+ font-size: 12px;
+ color: white;
+
+}
+
 
 /* Responsividade da Area de Batalhas */
         @media (max-width: 1200px) {
@@ -313,6 +358,25 @@ footer {
   height: 100vh; /* Ajuste a altura conforme necessário */
   text-align: center;
   color: white;
+}
+
+.rap {
+
+ color: white;
+ margin-top: -10%;
+ margin-bottom: 0;
+ font-size: 40px;
+ margin-left: 10%;
+
+}
+
+.recomendado {
+
+ color: white;
+ font-size: 30px;
+ margin-left: 24%;
+ margin-top: -6%;
+
 }
 
 #map {
