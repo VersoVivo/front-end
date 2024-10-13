@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Favicon, link do bootstrap e link do CSS -->
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <title>Login e Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
@@ -24,6 +25,9 @@
             background-position: center;
             /* Centraliza a imagem */
             height: 100vh;
+            filter: contrast(1.3) brightness(1.3) saturate(1.3) blur(-1px); /*deixa a imagem mais nítida, mais viva, com filtro e reduz os borrões.*/
+            transition: filter 0.3s ease;
+
         }
 
         .class1 {
@@ -52,12 +56,13 @@
 
         .botao button {
 
-         width: 60%;
+         width: 70%;
          cursor: pointer; /* Altera o cursor ao passar sobre o botão */
          background-color: orangered; /* Opcional: cor de fundo ao passar o mouse */
          margin-top: 50%;
          border-radius: 10px;
-         margin-left: 24%;
+         margin-left: 19%;
+         font-size: 20px;
          
 
         }
@@ -93,14 +98,16 @@
         .entrar {
 
         padding: 26%;
+        /*Detalhe: para afinar mais a letra, precisa usar a fonte - inherit e colocar a font-weight:100; Isso irá deixar a letra mais fina.*/
 
         }
 
         .pergunta {
 
        font-family:Arial, Helvetica, sans-serif;
-       margin-left: 22%;
+       margin-left: 30%;
        margin-top: 2%;
+       font-size: 14px;
        
         }
     </style>
@@ -110,9 +117,12 @@
 
     <div class="tudo">
         <div class="class1">
-            <h1>Salve, guerreiro(a)!</h1>
-            <p>Bora rimar? Insira seu usuário e senha pra gente começar essa batalha!</p>
-            <p style="margin-top: 36%;">Novo por aqui?
+            <h1 style="font-family: sans-serif; font-size: 60px; margin-top: 10%;" >Salve, guerreiro(a)!</h1>
+            <br>
+            <p style="font-size: 30px; font-family:inherit; color: rgb(255, 255, 255); font-weight: 100; /* deixa a letra mais fina */">Bora rimar? Insira seu usuário e senha pra
+                <br>
+                gente começar essa batalha!</p>
+            <p style="margin-top: 27%; color: rgba(255, 255, 255, 0.862); font-weight: 100; font-family: inherit; font-size: 20px;">Novo por aqui?
                 <br>
             Entre para nossa família!
             </p>
@@ -121,19 +131,19 @@
         <div class="class2">
             <form>
                 <div class="entrar">
-                    <p style="font-size: 300%; text-align: center; color: orangered;">Entrar</p>
+                    <p style="font-size: 300%; text-align: center; color: orangered; font-weight: 100; font-family:inherit;">Entrar</p>
                 </div>
                 <div class="mb-3 input-group">
                     <span class="input-group-text" style="background: transparent; border: none;">
                         <i class="fas fa-user" style="color: gray; margin-left: 3%;"></i>
                     </span>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Usuário" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Usuário" aria-describedby="emailHelp" style="font-size: 20px;">
                 </div>
                 <div class="mb-3 input-group">
                     <span class="input-group-text" style="background: transparent; border: none;">
                         <i class="fas fa-key" style="color: gray;"></i>
                     </span>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" style="font-size: 20px;">
                 </div>
                 
                 <!-- Link para o Font Awesome -->
@@ -159,5 +169,4 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
