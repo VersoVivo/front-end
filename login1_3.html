@@ -26,7 +26,7 @@
 <body>
     <div class="tudo">
         <div class="class1">
-            <div class="seta-esquerda"><i class="fa-solid fa-arrow-left"></i></div>
+            <div class="seta-esquerda"><a href="login.html" style="color: inherit;"><i class="fa-solid fa-arrow-left"></i></a></div>
             <br>
             <div class="you">
                 <h1 style="font-size: 50px;">Quem é você?</h1>
@@ -37,20 +37,20 @@
             <form>
                 <div class="escolha">
                     <div class="mb-3 input-group">
-                        <button type="submit" class="btn btn-primary"><b>MC</b></button>
+                        <button class="btn btn-primary" id="mc"><b>MC</b></button>
                     </div>
                     <div class="mb-3 input-group">
-                        <button type="submit" class="btn btn-primary"><b>Organizador</b></button>
+                        <button class="btn btn-primary" id="organizador"><b>Organizador</b></button>
                     </div>
                     <div class="mb-3 input-group">
-                        <button type="submit" class="btn btn-primary"><b>Espectador</b></button>
+                        <button class="btn btn-primary" id="espectador"><b>Espectador</b></button>
                     </div>
                 </div>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
                 <div class="botao1">
                     <button type="submit" class="btn btn-primary"><b>Próximo</b></button>
                     <div class="conta">
-                        <p>Já tem uma conta? <a href="#" style="color: orangered; text-decoration: none;">Entre agora mesmo!</a></p>
+                        <p>Já tem uma conta? <a href="login.html" class="linkRetorno">Entre agora mesmo!</a></p>
                     </div>
                 </div>
             </form>
@@ -68,7 +68,34 @@
     crossorigin="anonymous"></script>
   <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
 
-  <script src="scripts/cadastro.js"></script>
+  <!-- JavaScript -->
+  <script>
+    //Salvar a escolha do usuário em uma variável com PHP
+    var mc, organizador, espectador;
+
+    mc = document.getElementById("mc");
+    organizador = document.getElementById("organizador");
+    espectador = document.getElementById("espectador");
+
+    mc.addEventListener("click", (Event) => {
+        Event.preventDefault();
+        mc.style.background = "#BF4410";
+        organizador.style.background = "#0000005d";
+        espectador.style.background = "#0000005d";
+    });
+    organizador.addEventListener("click", (Event) => {
+        Event.preventDefault();
+        organizador.style.background = "#BF4410";
+        mc.style.background = "#0000005d";
+        espectador.style.background = "#0000005d";
+    });
+    espectador.addEventListener("click", (Event) => {
+        Event.preventDefault();
+        espectador.style.background = "#BF4410";
+        mc.style.background = "#0000005d";
+        organizador.style.background = "#0000005d";
+    });
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

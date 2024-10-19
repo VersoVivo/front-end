@@ -45,6 +45,17 @@
     color: #fff;
 }
 
+.class1 .botaoCadastre {
+    width: 20%; 
+    border-radius: 10px;
+    background-color: var(--laranja);
+    color: white;
+    text-align: center;
+    height: 4%;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
 .class2 {
     background-color: rgba(0, 0, 0, 0.44);
     /* Ajuste a opacidade conforme necessário */

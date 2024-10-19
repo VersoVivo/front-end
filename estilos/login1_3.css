@@ -1,3 +1,19 @@
+  /* Fontes */
+  @font-face {
+    font-family: "roboto";
+    src: url(/fontes/Roboto/Roboto-Regular.ttf);
+  
+    font-family: "montserrat";
+    src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf);
+  }
+  
+  /* Paleta de Cores */
+  :root {
+    --azulEscuro: #0C1D25;
+    --azulClaro: #104C64;
+    --laranja: #BF4410;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +43,6 @@
 
 /* Fim de trabalhando com a responsividade de telas */
 
-
 .class1 {
     display: flex;
     justify-content: center;
@@ -53,7 +68,7 @@ h1, p {
 .botao1 button {
     width: 80%;
     cursor: pointer;
-    background-color: orangered;
+    background-color: var(--laranja);
     border-radius: 10px;
     margin-top: 20px; /* Ajustado para diminuir o espaço */
     font-size: 20px;
@@ -63,13 +78,13 @@ h1, p {
 }
 
 .btn-primary {
-    border-color: orangered;
+    border-color: var(--laranja);
 }
 
 .form-control:focus {
     color: #212529;
     background-color: #ffffff00;
-    border-color: orangered;
+    border-color: var(--laranja);
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(13, 109, 253, 0);
     color: #fff;
@@ -82,8 +97,13 @@ h1, p {
     margin-top: 10px; /* Ajustado para ficar mais próximo */
 }
 
+.conta .linkRetorno {
+    color: var(--laranja);
+    text-decoration: none;
+}
+
 .escolha button {
-    background-color: rgba(0, 0, 0, 0.363);
+    background-color: #0000005d;
     color: white;
     font-family: sans-serif;
     border: solid rgba(0, 0, 0, 0);
@@ -91,6 +111,10 @@ h1, p {
     width: 100%;
     border-radius: 16px;
     margin-bottom: 10px; /* Ajustado para ficar mais próximo */
+}
+
+.escolha button:hover {
+    background-color: var(--azulClaro);
 }
 
 .seta-esquerda {
