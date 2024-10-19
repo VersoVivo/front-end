@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,18 +21,24 @@
             grid-template-columns: 4fr 4fr;
             background-image: url('imagens/fundoGaleria.jpg');
             background-size: cover;
-            flex-direction: column; /* Uma coluna em telas pequenas */
+            flex-direction: column;
+            /* Uma coluna em telas pequenas */
             background-position: center;
             height: 100vh;
             filter: contrast(1.3) brightness(1.3) saturate(1.3) blur(-1px);
             transition: filter 0.3s ease;
         }
 
+        /* Trabalhando com a responsividade de telas */
+
         @media (min-width: 768px) {
             .tudo {
-                flex-direction: row; /* Duas colunas em telas maiores */
+                flex-direction: row;
+                /* Duas colunas em telas maiores */
             }
         }
+
+        /* Fim de trabalhando com a responsividade de telas */
 
         .class1 {
             display: flex;
@@ -47,11 +54,14 @@
             width: 100%;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Alinha os botões verticalmente */
-            overflow-y: hidden; /* Evita barra de rolagem */
+            flex-direction: column;
+            /* Alinha os botões verticalmente */
+            overflow-y: hidden;
+            /* Evita barra de rolagem */
         }
 
-        h1, p {
+        h1,
+        p {
             color: #fff;
             font-family: sans-serif;
         }
@@ -61,7 +71,8 @@
             cursor: pointer;
             background-color: orangered;
             border-radius: 10px;
-            margin-top: 20px; /* Ajustado para diminuir o espaço */
+            margin-top: 20px;
+            /* Ajustado para diminuir o espaço */
             font-size: 20px;
             margin-top: 40%;
             font-family: sans-serif;
@@ -85,7 +96,8 @@
             font-size: 12px;
             font-weight: 100;
             font-family: inherit;
-            margin-top: 10px; /* Ajustado para ficar mais próximo */
+            margin-top: 10px;
+            /* Ajustado para ficar mais próximo */
         }
 
         .pesquisa input {
@@ -96,19 +108,21 @@
             width: 100%;
             font-family: sans-serif;
             border-radius: 16px;
-            margin-bottom: 10px; /* Ajustado para ficar mais próximo */
+            margin-bottom: 10px;
+            /* Ajustado para ficar mais próximo */
         }
 
         .pesquisa p {
-        margin-bottom: 5px; /* Reduz a margem para juntar os campos */
+            margin-bottom: 5px;
+            /* Reduz a margem para juntar os campos */
         }
 
         .seta-esquerda {
-            margin-bottom: 20px; /* Ajustado para ficar mais próximo */
+            margin-bottom: 20px;
+            /* Ajustado para ficar mais próximo */
             margin-top: -40%;
             font-size: 40px;
         }
-
     </style>
 </head>
 
@@ -123,50 +137,62 @@
             </div>
         </div>
         <div class="class2">
-        <br><br>
+            <br><br>
             <form>
                 <div class="pesquisa">
                     <p style="color: orangered; font-size: 16px;">Batalhas que organiza</p>
-                    <div class="mb-1 input-group" style="width: 110%;">
-                        <input type="text" class="form-control" placeholder="Informe os eventos que organiza" aria-label="Mestre">
+                    <div class="mb-1 input-group" style="width: 116%;">
+                        <input type="text" class="form-control" placeholder="Informe os eventos que organiza"
+                            aria-label="Mestre">
                     </div>
                     <p style="color: orangered; font-size: 16px;">Telefone de contato</p>
                     <div class="mb- input-group">
-                        <input type="text" class="form-control" placeholder="Informe seu telefone" aria-label="Organizador">
+                        <input type="text" class="form-control" placeholder="Informe seu telefone"
+                            aria-label="Organizador">
                     </div>
                     <p style="color: orangered; font-size: 16px;">Instagram</p>
                     <div class="mb-1 input-group">
-                        <input type="text" class="form-control" placeholder="Link da página do instagram" aria-label="Espectador">
+                        <input type="text" class="form-control" placeholder="Link da página do instagram"
+                            aria-label="Espectador">
                     </div>
                     <p style="color: orangered; font-size: 16px;">Facebook</p>
                     <div class="mb-1 input-group">
-                        <input type="text" class="form-control" placeholder="Link da página do facebook" aria-label="Espectador">
+                        <input type="text" class="form-control" placeholder="Link da página do facebook"
+                            aria-label="Espectador">
                     </div>
                     <p style="color: orangered; font-size: 16px;">Upload da logo</p>
                     <div class="mb-1 input-group" style="margin-left: 54%; width: 74%; margin-top: -16%;">
-                        <input type="text" class="form-control" placeholder="Escolha um arquivo" aria-label="Espectador">
+                        <label class="form-control" for="uploadLogo"
+                            style="cursor: pointer; display: flex; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.363); color: #7a7c7d; font-weight: 100; font-family: sans-serif; font-size: 14px; border: solid rgba(255, 255, 255, 0); border-radius: 16px;">
+                            Escolha um arquivo
+                            <input type="file" id="uploadLogo" class="d-none" aria-label="Upload da logo">
+                        </label>
                     </div>
                     <p style="color: orangered; font-size: 16px;">Detalhes</p>
                     <div class="mb-1 input-group" style="width: 105%;">
-                        <input type="text" class="form-control" placeholder="Fale um pouco sobre o evento" aria-label="Espectador">
+                        <input type="text" class="form-control" placeholder="Fale um pouco sobre o evento"
+                            aria-label="Espectador">
                     </div>
                 </div>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
                 <div class="botao1">
                     <button type="submit" class="btn btn-primary"><b>Criar</b></button>
                     <div class="conta">
-                        <p>Já tem uma conta? <a href="#" style="color: orangered; text-decoration: none;">Entre agora mesmo!</a></p>
+                        <p>Já tem uma conta? <a href="#" style="color: orangered; text-decoration: none;">Entre
+                                agora mesmo!</a></p>
                     </div>
                 </div>
             </form>
         </div>
-        
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>

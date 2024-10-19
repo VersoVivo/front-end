@@ -29,13 +29,6 @@
             transition: filter 0.3s ease;
         }
 
-        @media (min-width: 768px) {
-            .tudo {
-                flex-direction: row;
-                /* Duas colunas em telas maiores */
-            }
-        }
-
         .class1 {
             display: flex;
             justify-content: center;
@@ -120,6 +113,94 @@
             margin-top: -40%;
             font-size: 40px;
         }
+
+        /* Trabalhando com a responsividade de telas */
+
+        /* Estilos para telas grandes */
+        @media (min-width: 1200px) {
+
+            .pesquisa {
+
+                width: 160%;
+
+            }
+        }
+
+        .botao1 {
+
+        margin-left: 3%;
+ 
+        }
+
+        .conta {
+
+         margin-left: -3%;
+
+        }
+
+        @media (max-width: 768px) {
+            .tudo {
+                grid-template-columns: 1.8fr 2fr;
+                /* Uma coluna em telas pequenas */
+                height: auto;
+                /* Permite que a altura se ajuste ao conteúdo */
+                filter: none;
+                /* Remove o filtro em telas pequenas */
+            }
+
+            .class1,
+            .class2 {
+                width: 90%;
+                /* Ajusta a largura das classes para telas pequenas */
+            }
+
+            .botao1 button {
+                width: 90%;
+                /* Ajusta a largura do botão */
+                margin-top: 20px;
+                /* Ajusta o espaço em cima do botão */
+            }
+
+            .conta {
+                margin-left: -1%;
+                /* Ajusta a margem esquerda para telas pequenas */
+            }
+
+            .pesquisa input {
+                font-size: 16px;
+                /* Aumenta o tamanho da fonte para melhor legibilidade */
+            }
+
+            .pesquisa {
+
+                width: 170%;
+
+            }
+
+            .seta-esquerda {
+                font-size: 30px;
+                /* Ajusta o tamanho do ícone */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+                /* Ajusta o tamanho do título */
+            }
+
+            p {
+                font-size: 14px;
+                /* Ajusta o tamanho do texto */
+            }
+
+            .botao1 button {
+                font-size: 18px;
+                /* Ajusta o tamanho da fonte do botão */
+            }
+        }
+
+        /* Fim de trabalhando com a responsividade de telas */
     </style>
 </head>
 
@@ -135,7 +216,7 @@
         </div>
         <div class="class2">
             <br><br>
-            <form>
+            <form style="overflow: hidden;">
                 <div class="pesquisa">
                     <p style="color: orangered; font-size: 16px;">Batalhas favoritas</p>
                     <div class="mb-1 input-group">
@@ -148,107 +229,140 @@
                                 <option value="opcao2">Opção 2</option>
                                 <option value="opcao3">Opção 3</option>
                             </select>
-                            <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #ffffff;">▼</span>
+                            <span
+                                style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #ffffff;">▼</span>
                         </div>
                     </div>
-                    
+
                     <p style="color: orangered; font-size: 16px;">Endereço</p>
                     <div class="mb-1 input-group" style="width: 56%;">
-                        <input type="text" class="form-control" placeholder="Digite o nome da sua rua" aria-label="Organizador">
+                        <input type="text" class="form-control" placeholder="Digite o nome da sua rua"
+                            aria-label="Organizador">
                     </div>
-                    
+
                     <p style="color: orangered; font-size: 16px;">Bairro</p>
                     <div class="mb-1 input-group" style="width: 60%;">
-                        <input type="text" class="form-control" placeholder="Digite o nome do seu bairro" aria-label="Espectador">
+                        <input type="text" class="form-control" placeholder="Digite o nome do seu bairro"
+                            aria-label="Espectador">
                     </div>
-                    
+
                     <p style="color: orangered; font-size: 16px;">Cidade</p>
                     <div class="mb-1 input-group">
                         <div style="position: relative; display: inline-block; margin-right: 10px; width: 56%;">
-                            <select class="form-control" aria-label="Cidade" style="background-color: rgba(0, 0, 0, 0.363); color: #ffffff81; font-size: 14px; border: solid rgba(0, 0, 0, 0); border-radius: 16px; font-family: sans-serif; font-weight: 100;">
+                            <select class="form-control" aria-label="Cidade"
+                                style="background-color: rgba(0, 0, 0, 0.363); color: #ffffff81; font-size: 14px; border: solid rgba(0, 0, 0, 0); border-radius: 16px; font-family: sans-serif; font-weight: 100;">
                                 <option value="" disabled selected>Selecione a sua cidade</option>
-                                <option value="Rio de Janeiro" style="color: orangered; background-color: #000000;">Rio de Janeiro</option>
-                                <option value="São Paulo" style="color: #ffffff; background-color: #000000;">São Paulo</option>
-                                <option value="Belo Horizonte" style="color: orangered; background-color: #000000;">Belo Horizonte</option>
-                                <option value="Brasília" style="color: #ffffff; background-color: #000000;">Brasília</option>
-                                <option value="Salvador" style="color: orangered; background-color: #000000;">Salvador</option>
-                                <option value="Fortaleza" style="color: #ffffff; background-color: #000000;">Fortaleza</option>
-                                <option value="Curitiba" style="color: orangered; background-color: #000000;">Curitiba</option>
-                                <option value="Manaus" style="color: #ffffff; background-color: #000000;">Manaus</option>
-                                <option value="Recife" style="color: orangered; background-color: #000000;">Recife</option>
-                                <option value="Porto Alegre" style="color: #ffffff; background-color: #000000;">Porto Alegre</option>
-                                <option value="Goiânia" style="color: orangered; background-color: #000000;">Goiânia</option>
+                                <option value="Rio de Janeiro" style="color: orangered; background-color: #000000;">Rio
+                                    de Janeiro</option>
+                                <option value="São Paulo" style="color: #ffffff; background-color: #000000;">São Paulo
+                                </option>
+                                <option value="Belo Horizonte" style="color: orangered; background-color: #000000;">Belo
+                                    Horizonte</option>
+                                <option value="Brasília" style="color: #ffffff; background-color: #000000;">Brasília
+                                </option>
+                                <option value="Salvador" style="color: orangered; background-color: #000000;">Salvador
+                                </option>
+                                <option value="Fortaleza" style="color: #ffffff; background-color: #000000;">Fortaleza
+                                </option>
+                                <option value="Curitiba" style="color: orangered; background-color: #000000;">Curitiba
+                                </option>
+                                <option value="Manaus" style="color: #ffffff; background-color: #000000;">Manaus
+                                </option>
+                                <option value="Recife" style="color: orangered; background-color: #000000;">Recife
+                                </option>
+                                <option value="Porto Alegre" style="color: #ffffff; background-color: #000000;">Porto
+                                    Alegre</option>
+                                <option value="Goiânia" style="color: orangered; background-color: #000000;">Goiânia
+                                </option>
                                 <option value="Belém" style="color: #ffffff; background-color: #000000;">Belém</option>
-                                <option value="Campo Grande" style="color: orangered; background-color: #000000;">Campo Grande</option>
+                                <option value="Campo Grande" style="color: orangered; background-color: #000000;">Campo
+                                    Grande</option>
                                 <option value="Natal" style="color: #ffffff; background-color: #000000;">Natal</option>
-                                <option value="Teresina" style="color: orangered; background-color: #000000;">Teresina</option>
-                                <option value="João Pessoa" style="color: #ffffff; background-color: #000000;">João Pessoa</option>
-                                <option value="Maceió" style="color: orangered; background-color: #000000;">Maceió</option>
-                                <option value="Vitória" style="color: #ffffff; background-color: #000000;">Vitória</option>
+                                <option value="Teresina" style="color: orangered; background-color: #000000;">Teresina
+                                </option>
+                                <option value="João Pessoa" style="color: #ffffff; background-color: #000000;">João
+                                    Pessoa</option>
+                                <option value="Maceió" style="color: orangered; background-color: #000000;">Maceió
+                                </option>
+                                <option value="Vitória" style="color: #ffffff; background-color: #000000;">Vitória
+                                </option>
                             </select>
-                            <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #ffffff;">▼</span>
-                        </div>
-                        <div class="uf" style="margin-top: -2%; margin-left: 14%; position: fixed;">
-                        <p style="color: orangered; font-size: 16px;">UF</p>
-                    </div>
-                        <div style="position: relative; width: 20%;">
-                            <select class="form-control" aria-label="Estado" style="background-color: rgba(0, 0, 0, 0.363); color: #ffffff81; font-size: 14px; border: solid rgba(0, 0, 0, 0); border-radius: 16px; font-family: sans-serif; font-weight: 100;">
-                                <option value="" disabled selected>UF</option>
-                                <option value="AC" style="color: orangered; background-color: #000000;">Acre</option>
-                                <option value="AL" style="color: #ffffff; background-color: #000000;">Alagoas</option>
-                                <option value="AP" style="color: orangered; background-color: #000000;">Amapá</option>
-                                <option value="BA" style="color: #ffffff; background-color: #000000;">Bahia</option>
-                                <option value="CE" style="color: orangered; background-color: #000000;">Ceará</option>
-                                <option value="DF" style="color: #ffffff; background-color: #000000;">Distrito Federal</option>
-                                <option value="ES" style="color: orangered; background-color: #000000;">Espírito Santo</option>
-                                <option value="GO" style="color: #ffffff; background-color: #000000;">Goiás</option>
-                                <option value="MA" style="color: orangered; background-color: #000000;">Maranhão</option>
-                                <option value="MT" style="color: #ffffff; background-color: #000000;">Mato Grosso</option>
-                                <option value="MS" style="color: orangered; background-color: #000000;">Mato Grosso do Sul</option>
-                                <option value="MG" style="color: #ffffff; background-color: #000000;">Minas Gerais</option>
-                                <option value="PA" style="color: orangered; background-color: #000000;">Pará</option>
-                                <option value="PB" style="color: #ffffff; background-color: #000000;">Paraíba</option>
-                                <option value="PR" style="color: orangered; background-color: #000000;">Paraná</option>
-                                <option value="PE" style="color: #ffffff; background-color: #000000;">Pernambuco</option>
-                                <option value="PI" style="color: orangered; background-color: #000000;">Piauí</option>
-                                <option value="RJ" style="color: #ffffff; background-color: #000000;">Rio de Janeiro</option>
-                                <option value="RN" style="color: orangered; background-color: #000000;">Rio Grande do Norte</option>
-                                <option value="RS" style="color: #ffffff; background-color: #000000;">Rio Grande do Sul</option>
-                                <option value="RO" style="color: orangered; background-color: #000000;">Rondônia</option>
-                                <option value="RR" style="color: #ffffff; background-color: #000000;">Roraima</option>
-                                <option value="SC" style="color: orangered; background-color: #000000;">Santa Catarina</option>
-                                <option value="SP" style="color: #ffffff; background-color: #000000;">São Paulo</option>
-                                <option value="SE" style="color: orangered; background-color: #000000;">Sergipe</option>
-                                <option value="TO" style="color: #ffffff; background-color: #000000;">Tocantins</option>
-                            </select>
-                            <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #ffffff;">▼</span>
+                            <span
+                                style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #ffffff;">▼</span>
                         </div>
                     </div>
-            
-                    <p style="color: orangered; font-size: 16px;">Gênero</p>
+
+                    <p style="color: orangered; font-size: 16px;">UF</p>
+                    <div style="position: relative; width: 20%;">
+                        <select class="form-control" aria-label="Estado"
+                            style="background-color: rgba(0, 0, 0, 0.363); color: #ffffff81; font-size: 14px; border: solid rgba(0, 0, 0, 0); border-radius: 16px; font-family: sans-serif; font-weight: 100;">
+                            <option value="" disabled selected>UF</option>
+                            <option value="AC" style="color: orangered; background-color: #000000;">Acre</option>
+                            <option value="AL" style="color: #ffffff; background-color: #000000;">Alagoas</option>
+                            <option value="AP" style="color: orangered; background-color: #000000;">Amapá</option>
+                            <option value="BA" style="color: #ffffff; background-color: #000000;">Bahia</option>
+                            <option value="CE" style="color: orangered; background-color: #000000;">Ceará</option>
+                            <option value="DF" style="color: #ffffff; background-color: #000000;">Distrito Federal
+                            </option>
+                            <option value="ES" style="color: orangered; background-color: #000000;">Espírito Santo
+                            </option>
+                            <option value="GO" style="color: #ffffff; background-color: #000000;">Goiás</option>
+                            <option value="MA" style="color: orangered; background-color: #000000;">Maranhão</option>
+                            <option value="MT" style="color: #ffffff; background-color: #000000;">Mato Grosso</option>
+                            <option value="MS" style="color: orangered; background-color: #000000;">Mato Grosso do Sul
+                            </option>
+                            <option value="MG" style="color: #ffffff; background-color: #000000;">Minas Gerais</option>
+                            <option value="PA" style="color: orangered; background-color: #000000;">Pará</option>
+                            <option value="PB" style="color: #ffffff; background-color: #000000;">Paraíba</option>
+                            <option value="PR" style="color: orangered; background-color: #000000;">Paraná</option>
+                            <option value="PE" style="color: #ffffff; background-color: #000000;">Pernambuco</option>
+                            <option value="PI" style="color: orangered; background-color: #000000;">Piauí</option>
+                            <option value="RJ" style="color: #ffffff; background-color: #000000;">Rio de Janeiro
+                            </option>
+                            <option value="RN" style="color: orangered; background-color: #000000;">Rio Grande do Norte
+                            </option>
+                            <option value="RS" style="color: #ffffff; background-color: #000000;">Rio Grande do Sul
+                            </option>
+                            <option value="RO" style="color: orangered; background-color: #000000;">Rondônia</option>
+                            <option value="RR" style="color: #ffffff; background-color: #000000;">Roraima</option>
+                            <option value="SC" style="color: orangered; background-color: #000000;">Santa Catarina
+                            </option>
+                            <option value="SP" style="color: #ffffff; background-color: #000000;">São Paulo</option>
+                            <option value="SE" style="color: orangered; background-color: #000000;">Sergipe</option>
+                            <option value="TO" style="color: #ffffff; background-color: #000000;">Tocantins</option>
+                        </select>
+                        <span
+                            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #ffffff;">▼</span>
+                    </div>
+
+                    <p style="color: orangered; font-size: 16px; margin-top:3%;">Gênero</p>
                     <div class="mb-1 input-group">
                         <div style="position: relative; width: 53%;">
-                            <select class="form-control" aria-label="Gênero" style="background-color: rgba(0, 0, 0, 0.363); color: #ffffff81; font-size: 14px; border: solid rgba(0, 0, 0, 0); border-radius: 16px; font-family: sans-serif; font-weight: 100;">
+                            <select class="form-control" aria-label="Gênero"
+                                style="background-color: rgba(0, 0, 0, 0.363); color: #ffffff81; font-size: 14px; border: solid rgba(0, 0, 0, 0); border-radius: 16px; font-family: sans-serif; font-weight: 100;">
                                 <option value="" disabled selected>Selecione uma opção</option>
                                 <option value="masculino">Masculino</option>
                                 <option value="feminino">Feminino</option>
                                 <option value="outro">Outro</option>
                             </select>
-                            <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #ffffff;">▼</span>
+                            <span
+                                style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #ffffff;">▼</span>
                         </div>
                     </div>
                 </div>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
                 <div class="botao1">
                     <button type="submit" class="btn btn-primary"><b>Criar</b></button>
                     <div class="conta">
-                        <p>Já tem uma conta? <a href="#" style="color: orangered; text-decoration: none;">Entre agora mesmo!</a></p>
+                        <p style="margin: 0; white-space: nowrap;">
+                            Já tem uma conta? <a href="#" style="color: orangered; text-decoration: none;">Entre agora mesmo!</a>
+                        </p>
                     </div>
                 </div>
             </form>
-            
-        </div>
 
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -257,4 +371,5 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
 </body>
+
 </html>
