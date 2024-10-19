@@ -1,3 +1,19 @@
+/* Fontes */
+@font-face {
+    font-family: "roboto";
+    src: url(/fontes/Roboto/Roboto-Regular.ttf);
+  
+    font-family: "montserrat";
+    src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf);
+  }
+  
+  /* Paleta de Cores */
+  :root {
+    --azulEscuro: #0C1D25;
+    --azulClaro: #104C64;
+    --laranja: #BF4410;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +32,6 @@
     transition: filter 0.3s ease;
 }
 
-
 /* Trabalhando com a responsividade de telas */
 
 @media (min-width: 768px) {
@@ -25,8 +40,14 @@
     }
 }
 
-/* Fim de trabalhando com a responsividade de telas */
+.botao1 {
 
+   width: 100%;
+   margin-top: -20%;
+
+}
+
+/* Fim de trabalhando com a responsividade de telas */
 
 .class1 {
     display: flex;
@@ -43,6 +64,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Alinha os botões verticalmente */
+    overflow-y: hidden; /* Evita barra de rolagem */
 }
 
 h1, p {
@@ -82,15 +104,19 @@ h1, p {
     margin-top: 10px; /* Ajustado para ficar mais próximo */
 }
 
-.escolha button {
+.pesquisa input {
     background-color: rgba(0, 0, 0, 0.363);
     color: white;
-    font-family: sans-serif;
     border: solid rgba(0, 0, 0, 0);
-    font-size: 20px;
+    font-size: 14px;
     width: 100%;
+    font-family: sans-serif;
     border-radius: 16px;
     margin-bottom: 10px; /* Ajustado para ficar mais próximo */
+}
+
+.pesquisa p {
+margin-bottom: 5px; /* Reduz a margem para juntar os campos */
 }
 
 .seta-esquerda {

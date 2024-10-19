@@ -1,9 +1,7 @@
 /* Remove a formatação padrão do navegador */
 * {
   margin: 0;
-  /*sem margin*/
   padding: 0;
-  /*sem espaçamento*/
 }
 
 /* Fontes */
@@ -20,7 +18,6 @@
   --azulEscuro: #0C1D25;
   --azulClaro: #104C64;
   --laranja: #BF4410;
-  /*cores gravadas automática*/
 }
 
 /* html */

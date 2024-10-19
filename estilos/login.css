@@ -1,3 +1,19 @@
+  /* Fontes */
+  @font-face {
+    font-family: "roboto";
+    src: url(/fontes/Roboto/Roboto-Regular.ttf);
+  
+    font-family: "montserrat";
+    src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf);
+  }
+  
+  /* Paleta de Cores */
+  :root {
+    --azulEscuro: #0C1D25;
+    --azulClaro: #104C64;
+    --laranja: #BF4410;
+  }
+
 * {
     margin: 0;
     padding: 0;
