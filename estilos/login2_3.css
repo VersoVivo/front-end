@@ -2,17 +2,19 @@
 @font-face {
     font-family: "roboto";
     src: url(/fontes/Roboto/Roboto-Regular.ttf);
-  
+}
+
+@font-face {
     font-family: "montserrat";
     src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf);
-  }
-  
-  /* Paleta de Cores */
-  :root {
+}
+
+/* Paleta de Cores */
+:root {
     --azulEscuro: #0C1D25;
     --azulClaro: #104C64;
     --laranja: #BF4410;
-  }
+}
 
 * {
     margin: 0;
@@ -22,7 +24,7 @@
 
 .tudo {
     display: grid;
-    grid-template-columns: 4fr 4fr;
+    grid-template-columns: 1fr 1fr;
     background-image: url('../imagens/fundoGaleria.jpg');
     background-size: cover;
     flex-direction: column; /* Uma coluna em telas pequenas */
@@ -33,20 +35,26 @@
 }
 
 /* Trabalhando com a responsividade de telas */
-
 @media (min-width: 768px) {
     .tudo {
         flex-direction: row; /* Duas colunas em telas maiores */
     }
 }
 
-.botao1 {
-
-   width: 100%;
-   margin-top: -20%;
-
+.you2 h1 {
+    font-size: 50px !important; /* Ajuste conforme necessário */
 }
 
+.botao1 {
+    width: 100%;
+    margin-top: -10%; /* Ajustado para evitar sobreposição */
+}
+
+.pesquisa {
+
+margin-top: -16%;
+
+}
 /* Fim de trabalhando com a responsividade de telas */
 
 .class1 {
@@ -77,10 +85,9 @@ h1, p {
     cursor: pointer;
     background-color: orangered;
     border-radius: 10px;
-    margin-top: 20px; /* Ajustado para diminuir o espaço */
-    font-size: 20px;
-    margin-top: 40%;
-    font-family: sans-serif;
+    margin-top: 40px; /* Ajustado para melhor posicionamento */
+    font-size: 20px; /* Mantido */
+    padding: 10px; /* Mantido */
     margin-left: 10%;
 }
 
@@ -98,29 +105,32 @@ h1, p {
 }
 
 .conta {
-    font-size: 12px;
+    font-size: 12px; /* Ajustado para um pouco menor */
     font-weight: 100;
+    white-space: nowrap;
+    margin-left: -2%;
     font-family: inherit;
-    margin-top: 10px; /* Ajustado para ficar mais próximo */
+    margin-top: 4%; /* Ajustado para ficar mais próximo */
 }
 
 .pesquisa input {
     background-color: rgba(0, 0, 0, 0.363);
     color: white;
     border: solid rgba(0, 0, 0, 0);
-    font-size: 14px;
+    font-size: 15px; /* Ajustado para um pouco menor */
     width: 100%;
     font-family: sans-serif;
     border-radius: 16px;
     margin-bottom: 10px; /* Ajustado para ficar mais próximo */
+    height: 45px; /* Ajustado para um pouco menor */
 }
 
 .pesquisa p {
-margin-bottom: 5px; /* Reduz a margem para juntar os campos */
+    margin-bottom: 5px; /* Reduz a margem para juntar os campos */
 }
 
 .seta-esquerda {
     margin-bottom: 20px; /* Ajustado para ficar mais próximo */
     margin-top: -40%;
-    font-size: 40px;
+    font-size: 40px; /* Mantido */
 }

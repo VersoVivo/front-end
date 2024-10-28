@@ -22,7 +22,7 @@
 
 .tudo {
     display: grid;
-    grid-template-columns: 4fr 4fr;
+    grid-template-columns: 1fr 1fr;
     background-image: url('../imagens/fundoGaleria.jpg');
     background-size: cover;
     flex-direction: column; /* Uma coluna em telas pequenas */
@@ -32,15 +32,16 @@
     transition: filter 0.3s ease;
 }
 
-
 /* Trabalhando com a responsividade de telas */
-
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .tudo {
         flex-direction: row; /* Duas colunas em telas maiores */
+       
     }
 }
-
+.you1 h1 {
+    font-size: 50px !important; /* Ajuste conforme necessário */
+}
 /* Fim de trabalhando com a responsividade de telas */
 
 .class1 {
@@ -114,7 +115,7 @@ h1, p {
 }
 
 .escolha button:hover {
-    background-color: var(--azulClaro);
+    background-color: #104C64;
 }
 
 .seta-esquerda {

@@ -23,15 +23,11 @@
 .tudo {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    background-image: url('../imagens/fundoAzul.jpg');
-    /* Substitua 'fundo.jpg' pelo nome da sua imagem */
-    background-size: cover;
-    /* Faz a imagem cobrir todo o fundo */
-    background-position: center;
-    /* Centraliza a imagem */
+    background-image: url('../imagens/fundoAzul.jpg'); /* Substitua 'fundo.jpg' pelo nome da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
     height: 100vh;
-    filter: contrast(1.3) brightness(1.3) saturate(1.3) blur(-1px);
-    /*deixa a imagem mais nítida, mais viva, com filtro e reduz os borrões.*/
+    filter: contrast(1.3) brightness(1.3) saturate(1.3) blur(-1px); /*deixa a imagem mais nítida, mais viva, com filtro e reduz os borrões.*/
     transition: filter 0.3s ease;
 
 }
@@ -42,23 +38,22 @@
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
-    color: #fff;
+    color: #BF4410;
 }
 
 .class1 .botaoCadastre {
-    width: 20%; 
+    width: 26%; 
     border-radius: 10px;
     background-color: var(--laranja);
     color: white;
     text-align: center;
-    height: 4%;
+    height: 26px;
     margin-bottom: 1%;
     font-weight: bold;
 }
 
 .class2 {
-    background-color: rgba(0, 0, 0, 0.44);
-    /* Ajuste a opacidade conforme necessário */
+    background-color: rgba(0, 0, 0, 0.44); /* Ajuste a opacidade conforme necessário */
     display: flex;
     width: 100%;
     justify-content: center;
@@ -73,19 +68,15 @@ h1, p {
 .botao button {
 
     width: 70%;
-    cursor: pointer;
-    /* Altera o cursor ao passar sobre o botão */
-    background-color: orangered;
-    /* Opcional: cor de fundo ao passar o mouse */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    background-color: orangered; /* Opcional: cor de fundo ao passar o mouse */
     margin-top: 50%;
     border-radius: 10px;
     margin-left: 19%;
     font-size: 20px;
 }
 
-.botao button:hover {
-    background-color: orangered;
-    /* Opcional: cor de fundo ao passar o mouse */
+.botao button:hover { /* Opcional: cor de fundo ao passar o mouse */
     border-color: orangered;
 }
 
@@ -94,8 +85,7 @@ h1, p {
 }
 
 .form-control {
-    background-color: #ffffff00;
-    /* background-clip: padding-box; */
+    background-color: #ffffff00; /* background-clip: padding-box; */
     border: none;
     color: #fff;
     border-bottom: 4px solid #ced4da;
@@ -112,8 +102,7 @@ h1, p {
 }
 
 .entrar {
-    padding: 26%;
-    /*Detalhe: para afinar mais a letra, precisa usar a fonte - inherit e colocar a font-weight:100; Isso irá deixar a letra mais fina.*/
+    padding: 26%; /*Detalhe: para afinar mais a letra, precisa usar a fonte - inherit e colocar a font-weight:100; Isso irá deixar a letra mais fina.*/
 }
 
 .pergunta {
@@ -125,52 +114,42 @@ h1, p {
 }
 
 /* Trabalhando com a responsividade de telas */
-
 @media (max-width: 1200px) {
     .tudo {
-        grid-template-columns: 1fr;
-        /* Uma coluna em telas menores */
-        height: auto;
-        /* Altura automática em telas pequenas */
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        height: auto; /* Altura automática em telas pequenas */
     }
 
     .entrar {
-        padding: 20%;
-        /* Ajuste do padding para telas menores */
+        padding: 20%; /* Ajuste do padding para telas menores */
     }
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 50px;
-        /* Tamanho de fonte menor para telas pequenas */
+        font-size: 50px;/* Tamanho de fonte menor para telas pequenas */
     }
 
     p {
-        font-size: 24px;
-        /* Tamanho de fonte menor para parágrafos */
+        font-size: 24px; /* Tamanho de fonte menor para parágrafos */
     }
 
     .botao button {
-        font-size: 18px;
-        /* Tamanho de fonte do botão */
+        font-size: 18px; /* Tamanho de fonte do botão */
     }
 
     .pergunta {
-        font-size: 12px;
-        /* Tamanho de fonte menor para a pergunta */
+        font-size: 12px; /* Tamanho de fonte menor para a pergunta */
     }
 }
 
 @media (max-width: 576px) {
     h1 {
-        font-size: 40px;
-        /* Aumentando a responsividade */
+        font-size: 40px; /* Aumentando a responsividade */
     }
 
     p {
-        font-size: 13px;
-        /* Tamanho de fonte ainda menor para parágrafos */
+        font-size: 13px; /* Tamanho de fonte ainda menor para parágrafos */
     }
 
     .pergunta p {
@@ -180,18 +159,15 @@ h1, p {
     }
 
     .botao button {
-        width: 90%;
-        /* Botão ocupa mais espaço em telas muito pequenas */
+        width: 90%; /* Botão ocupa mais espaço em telas muito pequenas */
         margin-left: 13%;
 
     }
 
     .pergunta {
-        font-size: 10px;
-        /* Tamanho de fonte ainda menor para a pergunta */
+        font-size: 10px; /* Tamanho de fonte ainda menor para a pergunta */
         text-align: center;
         margin-left: 16%;
     }
 }
-
 /* Fim de trabalhando com a responsividade de telas */

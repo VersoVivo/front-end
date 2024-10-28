@@ -1,0 +1,322 @@
+/* Remove a formatação padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fontes */
+  @font-face {
+  font-family: "roboto";
+  src: url(/fontes/Roboto/Roboto-Regular.ttf);
+
+  font-family: "montserrat";
+  src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+/* Paleta de Cores */
+:root {
+  --azulEscuro: #0C1D25;
+  --azulClaro: #104C64;
+  --laranja: #BF4410;
+}
+
+/* html */
+html {
+  height: 100%; /*altura*/
+}
+
+body {
+  background-color: #0C1D25; /*cor de fundo*/
+  font-family: "roboto", "montserrat", sans-serif; /*fonte específica*/
+}
+
+/* Nav */
+nav {
+  background-color: #50505019; /*cor de fundo para o nav*/
+}
+
+/* Header */
+.banner img {
+  width: 100%; /*largura*/
+  margin-top: -20px; /*faz subir para cima quando usamos número negativo*/
+}
+
+.navbar-nav .nav-link {
+  color: white; /*cor principal*/
+  font-size: 24px; /*tamanho da fonte*/
+  font-weight: lighter; /* Mais leve que h1, que pode ser 400 */
+  margin: 0 20px 0 0; /*define a margin*/
+}
+
+.navbar-nav .nav-link:hover {
+  color: #929292; /*cor principal*/
+  text-decoration: underline; /* Sublinhado para links */
+}
+
+.barraOculta {
+  height: 100%; /*altura*/
+  width: 0; /*largura*/
+  position: fixed; /*fixar a posição*/
+  z-index: 1; /*um valor positivo que coloca o elemento acima dos elementos com z-index menor.*/
+  top: 0; /*topo*/
+  left: 0; /*esquerda*/
+  background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo com opacidade */
+  overflow-x: hidden; /*tira a barra de rolagem horizontal*/
+  transition: 0.5s; /* Transição com função de tempo */
+  padding-top: 60px; /*espaço para cima*/
+}
+
+.barraOculta a {
+  padding: 8px 8px 8px 32px; /*espaço*/
+  text-decoration: none; /*tira o sublinhado*/
+  font-size: 25px; /*tamanho da fonte*/
+  color: #818181; /*cor principal*/
+  display: block; /*exibe como bloco*/
+  transition: 0.3s; /*Transição com função de tempo*/
+}
+
+.barraOculta a:hover {
+  color: red; /*cor principal*/
+}
+
+.barraOculta .fecharBarraOculta {
+  position: absolute; /*O elemento é posicionado absolutamente */
+  top: 0; /*topo*/
+  right: 25px; /*direita*/
+  font-size: 36px; /*tamanho da fonte*/
+  margin-left: 50px; /*leva para a esquerda*/
+}
+
+/* Responsividade - Barra Oculta */
+@media screen and (max-height: 450px) {
+  .barraOculta {
+    padding-top: 15px; /*espaço para cima*/
+  }
+
+  .barraOculta a {
+    font-size: 18px; /*tamanho da fonte*/
+  }
+}
+
+/* Barra de Pesquisa */
+.search {
+  --input-line: white; 
+  --input-text-color: white;
+  --input-text-hover-color: transparent;
+  --input-bg-color: #ffffff30;
+  --search-max-width: 250px;
+  --search-min-width: 150px;
+  --border-radius: 10px;
+  --transition-cubic-bezier: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-box {
+  max-width: var(--search-max-width);
+  min-width: var(--search-min-width);
+  height: 35px;
+  border-radius: var(--border-radius);
+  padding: 5px 15px;
+  background: var(--input-bg-color);
+}
+/*Sessão do input*/
+.search-field {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: -5px;
+  margin-left: 1%;
+  --input-bg-color: #ffffff00;
+  border: 0;
+}
+.input {
+  width: calc(100% - 29px);
+  height: 100%;
+  border: 0;
+  border-color: transparent;
+  font-size: 1rem;
+  padding-right: 0px;
+  color: var(--input-line);
+  background: var(--input-bg-color);  
+}
+/*Botão de pesquisa*/
+.search-box-icon {
+  width: 52px;
+  height: 35px;
+  position: absolute;
+  top: -6px;
+  right: -21px;
+  background: transparent;
+  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.btn-icon-content {
+  height: 35px;
+  top: -6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.btn-icon-content:hover {
+  opacity: .8;
+}
+.search-icon {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+}
+.nome {
+  color: white;
+  font-size: 50px;
+  margin-top: 16%;
+  margin-left: 16%;
+}
+
+.linha_horizontal {
+
+  height: 1px; /* Define a altura da linha */
+  width: 80%; 
+  color: white;
+}
+.tudo {
+  margin-left: 16%;
+  margin-top: 3%;
+}
+
+.loc1, .loc2, .loc3, .loc4, .loc5, .loc6 {
+  background-color: rgb(201, 201, 201); /* Fundo branco */
+  width: 80%;
+  border-radius: 20px; /* Bordas arredondadas */
+  padding: 5px; /* Espaçamento interno reduzido */
+  margin-bottom: 10px; /* Espaçamento entre seções */
+}
+
+.titulo1, .titulo2, .titulo3, .titulo4, .titulo5, .titulo6 {
+  margin-left: 23%;
+  margin-top: -110px; /* Próximo do topo */
+  padding-top: 2px; /* Espaço acima do título reduzido */
+}
+
+.subtitulo1, .subtitulo2, .subtitulo3, .subtitulo4, .subtitulo5, .subtitulo6 {
+  margin-left: 23%;
+  padding-top: 2px; /* Espaço acima do subtítulo */
+}
+
+.data1, .data2, .data3, .data4, .data5, .data6 {
+  color: #BF4410;
+  margin-left: 88%;
+  font-size: 20px;
+  margin-top: -20px; /* Espaço acima da data reduzido */
+}
+
+/* Espaçamento entre as linhas horizontais */
+.linha_horizontal {
+  margin: 10px 0; /* Ajuste o valor conforme necessário para espaçamento */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+.rodapeSuperior {
+  padding: 20px;
+}
+.rodapeInferior {
+  background-color: #104C64;
+}
+.rodapeInferior p {
+  color: white;
+  margin: 0;
+}
+/* Fim do footer */
+/* Estilo para o conteúdo do menu hambúrguer */
+#navbarNav {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilo para mobile */
+@media (max-width: 768px) {
+  #navbarNav {
+  background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo com opacidade apenas para mobile */
+  }
+
+  /* Ajuste para links no menu */
+  .navbar-nav .nav-link {
+    color: white; /* Cor dos links */
+    font-weight: lighter;
+    margin: 10px 0; /* Espaçamento vertical entre os links */
+  }
+
+  .search {
+     margin-left: 6%;
+  }
+}
+
+/* Estilo da barra de pesquisa */
+form.d-flex {
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.navbar-toggler-icon {
+  background-color: var(--laranja);
+}
+
+/* Trabalhando com a responsividade de telas */
+@media screen and (max-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 18px; /* Ajuste o tamanho da fonte no menu */
+  }
+
+  .nome {
+    font-size: 30px; /* Reduz o tamanho do nome */
+    margin-top: 10%; /* Ajusta a margem superior */
+    margin-left: 5%; /* Ajusta a margem esquerda */
+  }
+
+  .tudo {
+    margin-left: 5%; /* Ajusta a margem para mobile */
+    margin-top: 5%; /* Ajusta a margem superior */
+    width: 90%; /* Define a largura da seção */
+  }
+
+  .loc1, .loc2, .loc3, .loc4, .loc5, .loc6 {
+    width: 100%; /* Faz com que as seções ocupem toda a largura */
+    padding: 10px; /* Ajusta o padding interno */
+  }
+
+  /* Títulos e subtítulos nas caixas */
+  .titulo1, .titulo2, .titulo3, .titulo4, .titulo5, .titulo6 {
+    font-size: 15px; /* Diminui o tamanho do título */
+    margin-top: -17%;
+  }
+
+  .subtitulo1, .subtitulo2, .subtitulo3, .subtitulo4, .subtitulo5, .subtitulo6 {
+    font-size: 13px; /* Diminui o tamanho do subtítulo */
+  }
+
+  /* Datas */
+  .data1, .data2, .data3, .data4, .data5, .data6 {
+    font-size: 16px; /* Diminui o tamanho da data */
+  }
+
+  /* Logo */
+  .navbar-brand img {
+    max-width: 120px; /* Ajuste o tamanho da logo */
+    height: auto; /* Mantém a propor/ção da logo */
+  }
+
+  .linha_horizontal {
+    width: 100%;
+  }
+
+  .nome {
+    margin-top: 30%;
+  }
+}
+/* Fim de trabalhando com a responsividade de telas */

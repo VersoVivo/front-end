@@ -1,314 +1,341 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <!-- Meta Tags relacionado a SEO -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Participe do site de batalhas de rima e freestyle, onde você pode assistir às melhores competições de rap ao vivo, acompanhar o calendário de eventos e ficar por dentro das próximas batalhas. Venha fazer parte da cultura hip hop!">
-  <meta name="keywords"
-    content="Batalha de rima, Rap, Freestyle, Cultura hip-hop, MCs, Competição de rap, Rimas criativas, Letras de rap, Eventos de freestyle, Comunidade de rappers, Beatmaking, Hip-hop nacional, Colaborações, História do rap, Vídeos de batalhas, batalha de rima, batalhas de rap, freestyle, MCs, rima improvisada, eventos de rap, batalhas de MCs, batalha de freestyle, batalhas de rima online, batalhas de rima ao vivo, rap improvisado, rimas de improviso, rap ao vivo, competições de rap, rap battles, rimas online, assistir batalhas de rima, próximos eventos de rap, calendário de batalhas, eventos de rima, batalhas de rima 2024, plataforma de rap, assistir rap online, agenda de batalhas de MCs, comunidade de rap, cultura hip hop, criar conta MC, site de batalhas de rima, eventos de hip hop, batalha de rima Brasil, competições de freestyle, próximos shows de rap, rap nacional, MCs brasileiros, rima de improviso ao vivo, batalhas de rima famosas, calendário de rimas, MCs de freestyle, eventos de hip hop online, shows de rap">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="pt-BR">
-  <meta name="author" content="Verso Vivo - Batalhas de Rima e Cultura Rap">
-  <meta name="publisher" content="Verso Vivo - Batalhas de Rima e Cultura Rap">
-  <!-- Fim Meta Tags relacionado a SEO -->
+    <!-- Meta Tags relacionado a SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Participe do site de batalhas de rima e freestyle, onde você pode assistir às melhores competições de rap ao vivo, acompanhar o calendário de eventos e ficar por dentro das próximas batalhas. Venha fazer parte da cultura hip hop!">
+    <meta name="keywords" content="Batalha de rima, Rap, Freestyle, Cultura hip-hop, MCs, Competição de rap, Rimas criativas, Letras de rap, Eventos de freestyle, Comunidade de rappers, Beatmaking, Hip-hop nacional, Colaborações, História do rap, Vídeos de batalhas, batalha de rima, batalhas de rap, freestyle, MCs, rima improvisada, eventos de rap, batalhas de MCs, batalha de freestyle, batalhas de rima online, batalhas de rima ao vivo, rap improvisado, rimas de improviso, rap ao vivo, competições de rap, rap battles, rimas online, assistir batalhas de rima, próximos eventos de rap, calendário de batalhas, eventos de rima, batalhas de rima 2024, plataforma de rap, assistir rap online, agenda de batalhas de MCs, comunidade de rap, cultura hip hop, criar conta MC, site de batalhas de rima, eventos de hip hop, batalha de rima Brasil, competições de freestyle, próximos shows de rap, rap nacional, MCs brasileiros, rima de improviso ao vivo, batalhas de rima famosas, calendário de rimas, MCs de freestyle, eventos de hip hop online, shows de rap">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+    <meta name="author" content="Verso Vivo - Batalhas de Rima e Cultura Rap">
+    <meta name="publisher" content="Verso Vivo - Batalhas de Rima e Cultura Rap">
+    <!-- Fim Meta Tags relacionado a SEO -->
 
-  <!-- Favicon, link do bootstrap e link do CSS -->
-  <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="estilos/index.css">
+    <!-- Favicon, link do bootstrap e link do CSS -->
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/index.css">
 
-  <!-- CSS - Mapa Leafletjs -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- CSS - Mapa Leafletjs -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 
-  <!-- JS - Mapa Leafletjs -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- JS - Mapa Leafletjs -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-  <title>VersoVivo</title>
+
+    <title>VersoVivo</title>
+
 </head>
-
 <body>
-  <!-- Inicio Cabeçalho -->
-  <header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
 
-        <a class="navbar-brand" href="index.html">
-          <img src="imagens/logo.svg" alt="Logo: VersoVivo" title="Logo: VersoVivo"
-            class="d-inline-block align-text-top img-fluid">
-        </a>
+    <!-- Inicio Cabeçalho -->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="imagens/logo.svg" alt="Logo: VersoVivo" title="Logo: VersoVivo"
+                        class="d-inline-block align-text-top img-fluid">
+                </a>
+
+                <!-- Botão do menu hamburguer -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Fim do botão do menu hamburguer -->
 
 
-        <!-- Toggle button for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                <!-- Navbar colapsável -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="batalhas.html">Batalhas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mc.html">Mc's</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Acesso</a>
+                        </li>
+                    </ul>
+                    <!-- Fim navbar colapsável -->
 
-        <!-- Navbar de cada área -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- Navbar links -->
-          <ul class="navbar-nav me-auto mx-auto">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#batalhas">Batalhas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="galeria.html">Galeria</a>
-            </li>
-          </ul>
 
-          <!-- Barra de Pesquisa -->
-          <form class="d-flex me-3">
-            <div class="search">
-              <div class="search-box">
+                    <!-- Barra de Pesquisa -->
+                    <form class="d-flex me-3">
+        <div class="search">
+            <div class="search-box">
                 <div class="search-field">
-                  <input placeholder="Pesquisar Batalha..." class="input" type="text">
-                  <div class="search-box-icon">
+                    <input placeholder="Pesquisar Batalha..." class="input" type="text">
+                    <div class="search-box-icon">
                     <button class="btn-icon-content">
-                      <i class="search-icon"> <!-- Icone -->
-                        <svg xmlns="://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
-                          <path
-                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-                            fill="#fff"></path>
-                        </svg>
-                      </i>
+                    <i class="fas fa-search" style="color: white; width: 30%;"></i> <!-- Ícone de lupa do Font Awesome -->
                     </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-          <!-- Fim Barra de Pesquisa -->
-
-          <div id="idBarraOculta" class="barraOculta">
-            <a href="javascript:void(0)" id="fecharConfig" class="fecharBarraOculta">Fechar</a>
-            <a href="#">Atualizar Informações</a>
-            <a href="#">B</a>
-            <a href="#">C</a>
-            <a href="#">Deletar Conta</a>
-          </div>
-
-          <!-- User Icon -->
-          <div class="navbar-text">
-            <span id="abrirConfig"><img src="imagens/iconeUser.svg" alt="Icone: Usuário" class="rounded-circle"
-                style="cursor: pointer;"></span>
-          </div>
+                    </div>
         </div>
-      </div>
-    </nav>
+            </div>
+                </div>
+                    </form>
+                    <!-- Fim barra de Pesquisa -->
 
-    <div class="banner">
-      <img src="imagens/banner.svg" alt="Banner da página principal" title="Seja Bem-vindo(a)">
-    </div>
-  </header>
-  <!-- Fim Cabeçalho -->
 
-  <main>
-    <div class="recomendado">
-      <p>Batalhas Recomendadas</p>
-    </div>
-    <br><br>
-    <!-- Início Batalhas -->
-    <div id="battlesCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="areaBatalhas">
-            <div class="card cardEventos">
-              <a href="#">
-                <img class="card-img-top"
-                  src="imagens/batalha_aldeia.jpg" alt="Image">
-                <div class="card-body">
-                  <h5 class="card-title">Batalha do Norte 1</h5>
-                  <p class="card-text">
-                    <i class="fas fa-calendar-alt"></i> Data Hora
-                </p>
-                <p class="card-text2">
-                    <i class="fas fa-map-marker-alt"></i> Local
-                </p>
+
+                    <!-- Ícone do usuário -->
+                    <div class="navbar-text" style="position: relative;">
+                        <span id="abrirConfig">
+                            <img src="imagens/iconeUser.svg" alt="Ícone: Usuário" class="rounded-circle" style="cursor: pointer; width: 40px;">
+                        </span>
+                    <!-- Fim ícone do usuário -->
+
+
+                    <!-- Botão para abrir o modal -->
+                    <!--<button onclick="mostrarModal()">Minha Conta</button>-->
+
+                     <!-- Modal de informações do usuário --> 
+                     <div id="infoUsuario" style="display:none; position:fixed; top: 50px; right: 10px; width: 300px; height: 400px; background-color: #fff; border: 1px solid #ccc; border-radius: 20px; padding: 20px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);">
+                     <h4>Minha Conta</h4>
+                     <ul style="list-style: none; padding: 0;">
+                     <li><strong>Nome:</strong></li>
+                     <li><strong>Email:</strong></li>
+                     <li><strong>Último login:</strong></li>
+                     </ul>
+
+                     <hr style="margin-top: 20%;">
+
+                     <h4 style="margin-top: 8%;">Configurações</h4>
+                     <ul style="list-style: none; padding: 0;">
+                     <li><a href="#" onclick="editarPerfil()">Editar perfil</a></li>
+                     <li><a href="#" onclick="alterarSenha()">Alterar senha</a></li>
+                     <li><a href="#" onclick="sair()">Sair</a></li>
+                     </ul>
+                    <!-- Fim do modal de informações do usuário --> 
+
+
+                     <!-- Botão para fechar o modal -->
+                     <button onclick="fecharModal()" style="border-radius: 6px; width: 50%; margin-top: 6%;">Fechar</button>
+                     </div>
+
+
+                    <!-- Funcionamento geral -->
+                    <script>
+                    // Função para exibir o modal
+                       function mostrarModal() {
+                       document.getElementById("infoUsuario").style.display = "block";
+                      }
+
+                    // Função para fechar o modal
+                       function fecharModal() {
+                       document.getElementById("infoUsuario").style.display = "none";
+                      }
+
+                    // Lógica para editar o perfil
+                       function editarPerfil() {
+                       window.location.href = "editar_perfil.html"; // Redireciona para a página de edição
+                      }
+
+                    // Lógica para alterar a senha
+                       function alterarSenha() {
+                       const novaSenha = prompt("Digite sua nova senha:");
+                       if (novaSenha) {
+                       alert("Senha alterada com sucesso!"); // Mostra um alerta de confirmação
+                    // Aqui, você pode adicionar a lógica para atualizar a senha no backend
+                       }
+                    }
+
+                   // Lógica para sair
+                       function sair() {
+                       alert("Você saiu da conta."); // Mensagem de confirmação
+                       window.location.reload(); // Recarrega a página como simulação de logout
+                    }
+                </script>
+                <!-- Fim do funcionamento geral -->
+
+
+                        <!-- Script para abrir a tela -->
+                        <script>
+                            document.getElementById('abrirConfig').addEventListener('click', function () {
+                                var infoUsuario = document.getElementById('infoUsuario');
+                                if (infoUsuario.style.display === 'none') {
+                                    infoUsuario.style.display = 'block';
+                                } else {
+                                    infoUsuario.style.display = 'none';
+                                }
+                            });
+                        </script>
+                        <!-- Fim do script para abrir a tela -->
+
+                    </div>
                 </div>
-              </a>
             </div>
-            <div class="card cardEventos">
-              <a href="#">
-                <img class="card-img-top"
-                  src="imagens/batalha_aldeia.jpg" alt="Image">
-                <div class="card-body">
-                  <h5 class="card-title">Batalha do Norte 2</h5>
-                  <p class="card-text">
-                    <i class="fas fa-calendar-alt"></i> Data Hora
-                </p>
-                <p class="card-text2">
-                    <i class="fas fa-map-marker-alt"></i> Local
-                </p>
-                </div>
-              </a>
-            </div>
-            <div class="card cardEventos">
-              <a href="#">
-                <img class="card-img-top"
-                  src="imagens/batalha_aldeia.jpg" alt="Image">
-                <div class="card-body">
-                  <h5 class="card-title">Batalha do Norte 3</h5>
-                  <p class="card-text">
-                    <i class="fas fa-calendar-alt"></i> Data Hora
-                </p>
-                <p class="card-text2">
-                    <i class="fas fa-map-marker-alt"></i> Local
-                </p>
-                </div>
-              </a>
-            </div>
-          </div>
+        </nav>
+        <!-- Fim Barra de Pesquisa -->
+
+
+        <!-- Banner de fundo dos Mc's -->
+        <div class="banner">
+            <img src="imagens/fundo_mc.jpg.jpeg" alt="Banner da página principal" title="Seja Bem-vindo(a)">
+            <p class="mais_eventos" style="font-family:sans-serif;">Batalhas em Chamas</p>
+            <p class="paragrafo" style="font-family: cursive;">VersoVivo na pista! Não fica de fora, cola nos
+                <br>
+                próximos duelos e solta a rima que vai virar hit!
+            </p>
         </div>
-        <div class="carousel-item">
-          <div class="areaBatalhas">
-            <div class="card cardEventos">
-              <a href="#">
-                <img class="card-img-top"
-                  src="imagens/batalha_aldeia.jpg" alt="Image">
-                <div class="card-body">
-                  <h5 class="card-title">Batalha do Norte 4</h5>
-                  <p class="card-text">
-                    <i class="fas fa-calendar-alt"></i> Data Hora
-                </p>
-                <p class="card-text2">
-                    <i class="fas fa-map-marker-alt"></i> Local
-                </p>
-                </div>
-              </a>
-            </div>
-            <div class="card cardEventos">
-              <a href="#">
-                  <img class="card-img-top" src="imagens/batalha_aldeia.jpg" alt="Image">
-                  <div class="card-body">
-                      <h5 class="card-title">Batalha do Norte 5</h5>
-                      <p class="card-text">
-                          <i class="fas fa-calendar-alt"></i> Data Hora
-                      </p>
-                      <p class="card-text2">
-                        <i class="fas fa-map-marker-alt"></i> Local
-                    </p>
-                  </div>
-              </a>
-          </div>
-            <div class="card cardEventos">
-              <a href="#">
-                <img class="card-img-top"
-                  src="imagens/batalha_aldeia.jpg" alt="Image">
-                <div class="card-body">
-                  <h5 class="card-title">Batalha do Norte 6</h5>
-                  <p class="card-text">
-                    <i class="fas fa-calendar-alt"></i> Data Hora
-                  </p>
-                  <p class="card-text2">
-                    <i class="fas fa-map-marker-alt"></i> Local
-                </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Link para o Font Awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- Fim do banner de fundo dos Mc's -->
+    </header>
+    <!-- Fim Cabeçalho -->
 
-      <!-- Indicadores -->
-      <ol class="carousel-indicators">
-        <li data-target="#battlesCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#battlesCarousel" data-slide-to="1"></li>
-      </ol>
 
-      <a class="carousel-control-prev" href="#battlesCarousel" role="button" data-slide="prev" style="margin-top: -30%;">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only"></span>
-      </a>
-      <a class="carousel-control-next" href="#battlesCarousel" role="button" data-slide="next" style="margin-top: -30%;">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only"></span>
-      </a>
-    </div>
+    <!-- Batalhas -->
+    <!-- Link para o Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Fim Batalhas -->
 
-    <!-- Inicio Mapa do Rap (Criar um arquivo a parte quando for inserir PHP) -->
-    <style>
-      /*Deixar mapa responsivo*/
-      #map {
-        width: 80%;
-        height: 750px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 20px;
-      }
-    </style>
-
-    <div class="rap">
-      <p>Mapa do Rap</p>
-    </div>
     <br><br>
-    <div class="mapaRap">
-      <div id="map"></div>
+
+    <!--Localização das batalhas-->
+    <div class="tudo">
+        <div class="loc1">
+            <div class="img1">
+                <img src="imagens/batalha_aldeia.jpg" alt="img1" title="imagem1" style="width: 20%; border-radius: 20px;">
+                <p class="titulo1"><b>Batalha da Aldeia</b></p>
+                <p class="subtitulo1"><b><i class="fas fa-map-marker-alt" style="color: #BF4410;"></i>Av. Guilherme Perereca, Barueri - SP</b></p>
+                <p class="data1"><b>07/09</b></p>
+            </div>
+            </div>
+        <hr class="linha_horizontal">
+
+
+        <div class="loc2">
+            <div class="img2">
+            <img src="imagens/batalha_aldeia.jpg" alt="img2" title="imagem2" style="width: 20%; border-radius: 20px;">
+            <p class="titulo2"><b>Batalha da Aldeia</b></p>
+            <p class="subtitulo2"><i class="fas fa-map-marker-alt" style="color: #BF4410;"></i><b>Av. Guilherme Perereca, Barueri - SP</b></p>
+            <p class="data2"><b>07/09</b></p>
+        </div>
+        </div>
+        <hr class="linha_horizontal">
+
+
+        <div class="loc3">
+            <div class="img3">
+            <img src="imagens/batalha_aldeia.jpg" alt="img3" title="imagem3" style="width: 20%; border-radius: 20px;">
+            <p class="titulo3"><b>Batalha da Aldeia</b></p>
+            <p class="subtitulo3"><b><i class="fas fa-map-marker-alt" style="color: #BF4410;"></i>Av. Guilherme Perereca, Barueri - SP</b></p>
+            <p class="data3"><b>07/09</b></p>
+        </div>
+        </div>
+        <hr class="linha_horizontal">
     </div>
-    <script>
-      //Mapa
-      var map = L.map('map').setView([-23.5281067, -46.6921427, 176], 17);
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      }).addTo(map);
+    <!--Fim de localização das batalhas-->
 
-      //Marcadores
-      var markerInicial = L.marker([-23.5281067, -46.6921427, 176]).addTo(map);
 
-      //Popups
-      markerInicial.bindPopup("<strong>Senac Tito</strong>");
-    </script>
+    <br>
 
-    <!-- Fim Mapa do Rap -->
-  </main>
-  <br>
 
-  <!-- Inicio Rodapé -->
-   <div class="footer" style="padding: 0; margin: 0;">
-  <footer>
-    <div class="rodapeSuperior">
-      <a href="https://github.com/VersoVivo" target="_blank"><img src="imagens/github.svg" alt="Icone do GitHub"
-          title="Venha Ver Nosso Repositório no GitHub"></a>
+    <!--Botão de ver mais-->
+    <div class="button1">
+    <button class="dropdown-title" onclick="window.location.href='batalhas.html'" style="border: 2px solid rgb(255, 255, 255); border-radius: 6px; display: flex; align-items: center; width: 110px; margin-left: 63%; height: 40px; background-color: transparent; cursor: pointer;">
+    <b style="margin-left: 10%; white-space: nowrap; color: #ffffff; font-size: 13px;">Ver tudo</b>
+    <i class="fas fa-chevron-down" style="margin-left: 20px; color: #BF4410;"></i>
+    </button>
     </div>
-    <div class="rodapeInferior">
-      <p><strong>Projeto Integrador - Senac Tito - TI43</strong></p>
+   <!--Fim do botão de ver mais-->
+
+    <br><br><br><br><br><br>
+
+    <!--Fundo dos Mc's-->
+    <div class="banner">
+        <img src="imagens/fundo_rapper.jpeg" alt="Banner dos MC's" title="Banner dos MC's" style="width: 140%; margin-left: -40%; height: 800px; filter: brightness(50%);"><p class="mais_eventos" style="margin-top: -600px; margin-left: 60px; filter: brightness(100%);">Principais MC's</p>
     </div>
-  </footer>
-</div>
-  <!-- Fim Rodapé -->
+    <!--Fim do fundo dos Mc's-->
 
-  <!-- JS Bootstrap atualizado de 3.4.1 para 3.6.1 segurança -->
-  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
-    integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
 
-  <script src="scripts/index.js"></script>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Imagens dos MC's-->
+    <div class="blocos" style="margin-left: 50%; margin-top: -26%; position: relative; position: absolute;">
+        <div class="container">
+            <div class="linha" style="margin-left: -187%;">
+                <div class="bloco1" style="margin-right: 50px;"><img src="imagens/apolo.jpg" alt="Imagem 1"><p class="nome1">Apolo</p></div>
+                <div class="bloco2" style="margin-right: 50px;"><img src="imagens/apolo.jpg" alt="Imagem 2"><p class="nome2">Apolo</p></div>
+                <div class="bloco3"><img src="imagens/apolo.jpg" alt="Imagem 3"><p class="nome3">Apolo</p></div>
+            </div>
+            <div class="linha" style="margin-left: -187%;">
+                <div class="bloco4" style="margin-right: 50px;"><img src="imagens/apolo.jpg" alt="Imagem 4"><p class="nome3">Apolo</p></div>
+                <div class="bloco5" style="margin-right: 50px;"><img src="imagens/apolo.jpg" alt="Imagem 5"><p class="nome4">Apolo</p></div>
+                <div class="bloco6"><img src="imagens/apolo.jpg" alt="Imagem 6"><p class="nome6">Apolo</p></div>
+            </div>
+        </div>
+    </div>
+    <!--Fim das imagens dos MC's-->
 
-  <!-- jQuery e Bootstrap JS (coloque isso no final do seu arquivo HTML) -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br>
+
+    <!--Botão de ver mais-->
+    <div class="button2">
+    <button class="dropdown-title" onclick="window.location.href='mc.html'" style="border: 2px solid rgb(255, 255, 255); border-radius: 6px; display: flex; align-items: center; width: 110px; margin-left: 75%; height: 40px; background-color: transparent; cursor: pointer; margin-top: 8%;">
+        <b style="margin-left: 10%; white-space: nowrap; color: #BF4410; font-size: 13px;">Ver tudo</b>
+        <i class="fas fa-chevron-down" style="margin-left: 20px; color: #BF4410;"></i>
+    </button>
+    </div>
+    <!--Fim do botão de ver mais-->
+
+
+    <!-- Inicio Rodapé -->
+    <div class="footer" style="padding: 0; margin: 0; overflow: hidden;">
+        <footer>
+            <div class="rodapeSuperior">
+                <a href="https://github.com/VersoVivo" target="_blank"><img src="imagens/github.svg" alt="Icone do GitHub" title="Venha Ver Nosso Repositório no GitHub"></a>
+            </div>
+            <div class="rodapeInferior">
+                <p><strong>Projeto Integrador - Senac Tito - TI43</strong></p>
+            </div>
+        </footer>
+    </div>
+    <!-- Fim Rodapé -->
+
+
+    <!-- jQuery versão 3.6.1 com correção de segurança -->
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+
+    <!-- Popper.js versão 1.16.0 para manipulação de pop-ups e tooltips em Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap versão 4.4.1 para funcionalidades principais e visuais do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Lightbox2 para visualização de imagens em um modal estilizado -->
+    <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+
+    <!-- Script personalizado (index.js) para funcionalidades específicas da página -->
+    <script src="scripts/index.js"></script>
+
+    <!-- jQuery versão 3.3.1 para compatibilidade com Bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <!-- Popper.js versão 1.14.7, versão alternativa para Bootstrap 4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Bootstrap versão 4.3.1 para funcionalidades e estilos do framework -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- jQuery versão 3.6.0 para manipulação de DOM e compatibilidade geral -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap versão 4.5.2 com dependência popper.js e compatibilidade adicional para funcionalidades avançadas -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap versão 5.3.3 com funcionalidades de bundle para versões mais recentes -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

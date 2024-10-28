@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/editar_perfil.css">
+    <title>Editar Perfil</title>
+    
+</head>
+<body>
+
+    <!-- Informações básicas para editar perfil -->
+    <div class="container">
+        <h2>Editar Perfil</h2>
+        <form onsubmit="salvarPerfil(event)">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Nova Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+    <!-- Fim de informações básicas para editar perfil -->
+
+
+    <!-- Funcionamento -->
+    <script>
+        // Salva as informações de perfil no Local Storage e limpa os campos
+        function salvarPerfil(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+
+            // Salva no Local Storage
+            localStorage.setItem("nome", nome);
+            localStorage.setItem("email", email);
+            localStorage.setItem("senha", senha);
+
+            alert("Perfil atualizado com sucesso!");
+
+            // Limpa os campos do formulário
+            document.getElementById("nome").value = '';
+            document.getElementById("email").value = '';
+            document.getElementById("senha").value = '';
+        }
+    </script>
+    <!-- Fim de funcionamento -->
+</body>
+</html>

@@ -22,7 +22,7 @@
 
 .tudo {
     display: grid;
-    grid-template-columns: 4fr 4fr;
+    grid-template-columns: 1fr 1fr;
     background-image: url('../imagens/fundoGaleria.jpg');
     background-size: cover;
     flex-direction: column;
@@ -38,11 +38,13 @@
 
 @media (min-width: 768px) {
     .tudo {
-        flex-direction: row;
-        /* Duas colunas em telas maiores */
+        flex-direction: row; /* Duas colunas em telas maiores */
     }
 }
 
+.you4 h1 {
+    font-size: 50px !important; /* Ajuste conforme necessário */
+}
 /* Fim de trabalhando com a responsividade de telas */
 
 
@@ -60,10 +62,8 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    /* Alinha os botões verticalmente */
-    overflow-y: hidden;
-    /* Evita barra de rolagem */
+    flex-direction: column; /* Alinha os botões verticalmente */
+    overflow-y: hidden; /* Evita barra de rolagem horizontal */
 }
 
 h1,
@@ -77,10 +77,9 @@ p {
     cursor: pointer;
     background-color: orangered;
     border-radius: 10px;
-    margin-top: 20px;
-    /* Ajustado para diminuir o espaço */
+    margin-top: 20px; /* Ajustado para diminuir o espaço */
     font-size: 20px;
-    margin-top: 40%;
+    margin-top: 20%;
     font-family: sans-serif;
     margin-left: 10%;
 }
@@ -103,7 +102,7 @@ p {
     font-weight: 100;
     font-family: inherit;
     margin-top: 10px;
-    /* Ajustado para ficar mais próximo */
+    margin-left: 2%; /* Ajustado para ficar mais próximo */
 }
 
 .pesquisa input {
@@ -114,18 +113,15 @@ p {
     width: 100%;
     font-family: sans-serif;
     border-radius: 16px;
-    margin-bottom: 10px;
-    /* Ajustado para ficar mais próximo */
+    margin-bottom: -1px; /* Ajustado para ficar mais próximo */
 }
 
 .pesquisa p {
-    margin-bottom: 5px;
-    /* Reduz a margem para juntar os campos */
+    margin-bottom: 5px; /* Reduz a margem para juntar os campos */
 }
 
 .seta-esquerda {
-    margin-bottom: 20px;
-    /* Ajustado para ficar mais próximo */
+    margin-bottom: 20px; /* Ajustado para ficar mais próximo */
     margin-top: -40%;
     font-size: 40px;
 }
