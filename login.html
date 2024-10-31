@@ -37,6 +37,7 @@
             </p>
             <p class="botaoCadastre"><a href="login1_3.html" style="color: white; text-decoration: none;">Cadastra-se</a></p>
         </div>
+        <!-- Fim do título do Login -->
         
 
         <!-- Título entrar -->
@@ -67,13 +68,42 @@
                 <div class="botao">
                     <button type="submit" class="btn btn-primary"><b>Entrar</b></button>
                 </div>
-                <div class="pergunta">
-                    <p style="color: rgb(245, 142, 104);">Esqueceu sua senha?</p>
+                <div class="conta">
+                    <p>Já tem uma conta? <a href="index.html" class="linkRetorno" style="color: orangered; text-decoration: none;">Entre agora mesmo!</a></p>
                 </div>
                 <!-- Fim do botão de entrar -->
             </form>
         </div>
     </div>
+
+    
+     <!-- Funcionamento dos botões -->
+     <script>
+       // Redireciona para a página de cadastro ao clicar em "Cadastrar-se"
+    document.querySelector(".botaoCadastre a").onclick = function(event) {
+    event.preventDefault();
+    window.location.href = "login1_3.html"; // Altere para o nome correto da sua página de cadastro
+  };
+
+      // Preenche usuário e senha ao voltar da página de cadastro
+    if (window.location.href.includes("login.html")) { 
+    const urlParams = new URLSearchParams(window.location.search);
+    const role = urlParams.get("role");
+
+    if (role === "mc") { 
+        document.getElementById("exampleInputEmail1").value = "mc_exemplo"; // Preenchimento do campo de usuário
+        document.getElementById("exampleInputPassword1").value = "senha_exemplo"; // Preenchimento do campo de senha
+    }
+  }
+
+     // Redireciona para a página de dados básicos ao clicar em "Entrar"
+    document.querySelector(".botao button[type='submit']").onclick = function(event) {
+    event.preventDefault();
+    window.location.href = "login2_3.html"; // Altere para o nome correto da sua página de dados básicos
+  };
+    </script>       
+   <!-- Fim do funcionamento dos botões -->
+
 
   <!-- JS Bootstrap atualizado de 3.4.1 para 3.6.1 segurança -->
   <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>

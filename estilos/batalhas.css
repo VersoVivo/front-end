@@ -1,23 +1,23 @@
 /* Remove a formatação padrão do navegador */
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0; /*margin zero*/
+  padding: 0; /*espaçamento zero*/
 }
 
 /* Fontes */
   @font-face {
-  font-family: "roboto";
-  src: url(/fontes/Roboto/Roboto-Regular.ttf);
+  font-family: "roboto"; /*fonte da letra*/
+  src: url(/fontes/Roboto/Roboto-Regular.ttf); /*fontes*/
 
   font-family: "montserrat";
-  src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf);
+  src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf); /*fontes*/
 }
 
 /* Paleta de Cores */
 :root {
-  --azulEscuro: #0C1D25;
-  --azulClaro: #104C64;
-  --laranja: #BF4410;
+  --azulEscuro: #0C1D25; /*deixa a cor gravada*/
+  --azulClaro: #104C64; /*deixa a cor gravada*/
+  --laranja: #BF4410; /*deixa a cor gravada*/
 }
 
 /* html */
@@ -100,115 +100,115 @@ nav {
 
 /* Barra de Pesquisa */
 .search {
-  --input-line: white; 
-  --input-text-color: white;
-  --input-text-hover-color: transparent;
-  --input-bg-color: #ffffff30;
-  --search-max-width: 250px;
-  --search-min-width: 150px;
-  --border-radius: 10px;
-  --transition-cubic-bezier: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --input-line: white; /*cor da linha*/
+  --input-text-color: white; /*cor do texto*/
+  --input-text-hover-color: transparent; /*cor transparente*/
+  --input-bg-color: #ffffff30; /*cor*/
+  --search-max-width: 250px; /*largura máxima da barra de pesquisa*/
+  --search-min-width: 150px; /*largura mínima da barra de pesquisa*/
+  --border-radius: 10px; /*tamanho da borda*/
+  --transition-cubic-bezier: 150ms cubic-bezier(0.4, 0, 0.2, 1); /*transição*/
 }
 
 .search-box {
-  max-width: var(--search-max-width);
-  min-width: var(--search-min-width);
-  height: 35px;
-  border-radius: var(--border-radius);
-  padding: 5px 15px;
-  background: var(--input-bg-color);
+  max-width: var(--search-max-width); /*largura máxima da barra de pesquisa*/
+  min-width: var(--search-min-width); /*largura mínima da barra de pesquisa*/
+  height: 35px; /*altura*/
+  border-radius: var(--border-radius); /*tamanho da borda gravada*/
+  padding: 5px 15px; /*espaçamento*/
+  background: var(--input-bg-color); /*cor de fundo*/
 }
 /*Sessão do input*/
 .search-field {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  left: -5px;
-  margin-left: 1%;
-  --input-bg-color: #ffffff00;
-  border: 0;
+  position: relative; /*posição*/
+  width: 100%; /*largura*/
+  height: 100%; /*altura*/
+  left: -5px; /*esquerda*/
+  margin-left: 1%; /*margin à esquerda*/
+  --input-bg-color: #ffffff00; /*cor gravada*/
+  border: 0; /*borda zero*/
 }
 .input {
-  width: calc(100% - 29px);
-  height: 100%;
-  border: 0;
-  border-color: transparent;
-  font-size: 1rem;
-  padding-right: 0px;
-  color: var(--input-line);
-  background: var(--input-bg-color);  
+  width: calc(100% - 29px); /*largura - altera conforme fica bom*/
+  height: 100%; /*altura*/
+  border: 0; /*borda zero*/
+  border-color: transparent; /*cor da borda transparente*/
+  font-size: 1rem; /*tamanho da fonte*/
+  padding-right: 0px; /*espaçamento à direita*/
+  color: var(--input-line); /*cor gravada*/
+  background: var(--input-bg-color); /*cor de fundo gravada*/
 }
 /*Botão de pesquisa*/
 .search-box-icon {
-  width: 52px;
-  height: 35px;
-  position: absolute;
-  top: -6px;
-  right: -21px;
-  background: transparent;
-  border-bottom-right-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
+  width: 52px; /*largura*/
+  height: 35px; /*altura*/
+  position: absolute; /*posição*/
+  top: -6px; /*topo*/
+  right: -21px; /*direita*/
+  background: transparent; /*cor de fundo transparente*/
+  border-bottom-right-radius: var(--border-radius); /*borda abaixo à direita gravada*/
+  border-top-right-radius: var(--border-radius); /*borda a cima à direita gravada*/
 }
 .btn-icon-content {
-  height: 35px;
-  top: -6px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  border-bottom-right-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
+  height: 35px; /*altura*/
+  top: -6px; /*topo*/
+  background: transparent; /*cor de fundo transparente*/
+  border: none; /*sem borda*/
+  cursor: pointer; /*ao passar o cursor por cima*/
+  border-bottom-right-radius: var(--border-radius); /*borda abaixo à direita gravada*/
+  border-top-right-radius: var(--border-radius); /*borda a cima à direita gravada*/
 }
 .btn-icon-content:hover {
-  opacity: .8;
+  opacity: .8; /*opacidade*/
 }
 .search-icon {
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  top: 7px;
-  right: 15px;
+  width: 21px; /*largura*/
+  height: 21px; /*altura*/
+  position: absolute; /*posição*/
+  top: 7px; /*topo*/
+  right: 15px; /*direita*/
 }
 .nome {
-  color: white;
-  font-size: 50px;
-  margin-top: 16%;
-  margin-left: 16%;
+  color: white; /*cor principal*/
+  font-size: 50px; /*tamanho da fonte*/
+  margin-top: 16%; /*margin para cima*/
+  margin-left: 16%; /*margin para a esquerda*/
 }
 
 .linha_horizontal {
 
   height: 1px; /* Define a altura da linha */
-  width: 80%; 
-  color: white;
+  width: 80%; /*largura*/
+  color: white; /*cor*/
 }
 .tudo {
-  margin-left: 16%;
-  margin-top: 3%;
+  margin-left: 16%; /*margin para a esquerda*/
+  margin-top: 3%; /*margin para cima*/
 }
 
 .loc1, .loc2, .loc3, .loc4, .loc5, .loc6 {
   background-color: rgb(201, 201, 201); /* Fundo branco */
-  width: 80%;
+  width: 80%; /*largura*/
   border-radius: 20px; /* Bordas arredondadas */
   padding: 5px; /* Espaçamento interno reduzido */
   margin-bottom: 10px; /* Espaçamento entre seções */
 }
 
 .titulo1, .titulo2, .titulo3, .titulo4, .titulo5, .titulo6 {
-  margin-left: 23%;
+  margin-left: 23%; /*margin para a esquerda*/
   margin-top: -110px; /* Próximo do topo */
   padding-top: 2px; /* Espaço acima do título reduzido */
 }
 
 .subtitulo1, .subtitulo2, .subtitulo3, .subtitulo4, .subtitulo5, .subtitulo6 {
-  margin-left: 23%;
+  margin-left: 23%; /*margin para a esquerda*/
   padding-top: 2px; /* Espaço acima do subtítulo */
 }
 
 .data1, .data2, .data3, .data4, .data5, .data6 {
-  color: #BF4410;
-  margin-left: 88%;
-  font-size: 20px;
+  color: #BF4410; /*cor*/
+  margin-left: 88%; /*margin para a esquerda*/
+  font-size: 20px; /*tamanho da fonte*/
   margin-top: -20px; /* Espaço acima da data reduzido */
 }
 
@@ -219,25 +219,25 @@ nav {
 
 /* Footer */
 footer {
-  text-align: center;
-  bottom: 0;
-  width: 100%;
+  text-align: center; /*alinha o texto para o centro*/
+  bottom: 0; /*borda zero*/
+  width: 100%; /*largura*/
 }
 .rodapeSuperior {
-  padding: 20px;
+  padding: 20px; /*espaçamento*/
 }
 .rodapeInferior {
-  background-color: #104C64;
+  background-color: #104C64; /*cor de fundo*/
 }
 .rodapeInferior p {
-  color: white;
-  margin: 0;
+  color: white; /*cor*/
+  margin: 0; /*margin zero*/
 }
 /* Fim do footer */
 /* Estilo para o conteúdo do menu hambúrguer */
 #navbarNav {
-  padding: 20px;
-  text-align: center;
+  padding: 20px; /*espaçamento*/
+  text-align: center; /*alinha o texto para o centro*/
 }
 
 /* Estilo para mobile */
@@ -249,12 +249,12 @@ footer {
   /* Ajuste para links no menu */
   .navbar-nav .nav-link {
     color: white; /* Cor dos links */
-    font-weight: lighter;
+    font-weight: lighter; /*afina a letra em alguns sentidos*/
     margin: 10px 0; /* Espaçamento vertical entre os links */
   }
 
   .search {
-     margin-left: 6%;
+     margin-left: 6%; /*margin para a esquerda*/
   }
 }
 
@@ -264,7 +264,7 @@ form.d-flex {
 }
 
 .navbar-toggler-icon {
-  background-color: var(--laranja);
+  background-color: var(--laranja); /*cor de fundo gravada*/
 }
 
 /* Trabalhando com a responsividade de telas */
@@ -293,7 +293,7 @@ form.d-flex {
   /* Títulos e subtítulos nas caixas */
   .titulo1, .titulo2, .titulo3, .titulo4, .titulo5, .titulo6 {
     font-size: 15px; /* Diminui o tamanho do título */
-    margin-top: -17%;
+    margin-top: -17%; /*margin para cima*/
   }
 
   .subtitulo1, .subtitulo2, .subtitulo3, .subtitulo4, .subtitulo5, .subtitulo6 {
@@ -312,11 +312,11 @@ form.d-flex {
   }
 
   .linha_horizontal {
-    width: 100%;
+    width: 100%; /*largura*/
   }
 
   .nome {
-    margin-top: 30%;
+    margin-top: 30%; /*margin para cima*/
   }
 }
 /* Fim de trabalhando com a responsividade de telas */

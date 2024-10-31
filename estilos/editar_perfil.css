@@ -1,51 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f9;
+    font-family: Arial, sans-serif; /*fonte específica*/
+    display: flex; /*define o elemento como um flex-container*/
+    justify-content: center; /*deixa os elementos no centro*/
+    align-items: center; /*alinha os items para o centro*/
+    height: 100vh; /*altura em vh*/
+    margin: 0; /*margin zero*/
+    background-color: #f4f4f9; /*cor de fundo*/
 }
 .container {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 300px; /*largura*/
+    padding: 20px; /*espaçamento*/
+    background-color: #fff; /*cor de fundo*/
+    border: 1px solid #ccc; /*borda com cor e tamanho*/
+    border-radius: 8px; /*tamanho da borda*/
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /*cor e outros*/
 }
 h2 {
-    text-align: center;
-    color: #333;
+    text-align: center; /*alinha o texto para o centro*/
+    color: #333; /*cor*/
 }
 label {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
+    font-weight: bold; /*aumenta o tamanho da fonte*/
+    display: block; /*deixa em blocos*/
+    margin-top: 10px; /*margin para cima*/
 }
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-left: -3%;
+    width: 100%; /*largura*/
+    padding: 8px; /*largura*/
+    margin-top: 5px; /*margin para cima*/
+    margin-bottom: 10px; /*margin para baixo*/
+    border: 1px solid #ccc; /*borda com cor e tamanho*/
+    border-radius: 4px; /*tamanho da borda*/
+    margin-left: -3%; /*margin para a esquerda*/
 }
 button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6%;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
+    width: 100%; /*largura*/
+    padding: 10px; /*espaçamento*/
+    margin-top: 6%; /*margin para cima*/
+    background-color: #007bff; /*cor de fundo*/
+    border: none; /*sem borda*/
+    border-radius: 4px; /*tamanho da borda*/
+    color: #fff; /*cor*/
+    font-weight: bold; /*aumenta o tamanho da fonte*/
+    cursor: pointer; /*ao passar o cursor*/
 }
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /*cor de fundo*/
 }
+
+.fonte-zero{
+    font-size: 0px; /*tamanho da fonte*/
+    padding: 0px; /*espaçamento*/
+    opacity: 0; /*opacidade*/
+    float: none; /*sem float*/
+    border: 0px; /*sem borda*/
+    display: none; /*sem display*/
+  }

@@ -1,35 +1,35 @@
   /* Fontes */
   @font-face {
-    font-family: "roboto";
-    src: url(/fontes/Roboto/Roboto-Regular.ttf);
+    font-family: "roboto"; /*estilo de fonte*/
+    src: url(/fontes/Roboto/Roboto-Regular.ttf); /*fonte*/
   
-    font-family: "montserrat";
-    src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-family: "montserrat"; /*fonte*/
+    src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf); /*fonte*/
   }
   
   /* Paleta de Cores */
   :root {
-    --azulEscuro: #0C1D25;
-    --azulClaro: #104C64;
-    --laranja: #BF4410;
+    --azulEscuro: #0C1D25; /*cor gravada*/
+    --azulClaro: #104C64; /*cor gravada*/
+    --laranja: #BF4410; /*cor gravada*/
   }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /*margin zero*/
+    padding: 0; /*espaço zero*/
+    box-sizing: border-box; /*faz com o que a altura e a largura de um elemento incluam o conteúdo, padding e borda, mantendo o tamanho total conforme definido*/
 }
 
 .tudo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-image: url('../imagens/fundoGaleria.jpg');
-    background-size: cover;
+    display: grid; /*organiza e alinha elementos em linhas e colunas*/
+    grid-template-columns: 1fr 1fr; /*define o número e a largura das colunas em grid*/
+    background-image: url('../imagens/fundoGaleria.jpg'); /*ele coloca a url da imagem desejada*/
+    background-size: cover; /*ocupa todo o espaço da imagem*/
     flex-direction: column; /* Uma coluna em telas pequenas */
-    background-position: center;
-    height: 100vh;
-    filter: contrast(1.3) brightness(1.3) saturate(1.3) blur(-1px);
-    transition: filter 0.3s ease;
+    background-position: center; /*posição da imagem no centro*/
+    height: 100vh; /*altura em vh*/
+    filter: contrast(1.3) brightness(1.3) saturate(1.3) blur(-1px); /*filtro na imagem*/
+    transition: filter 0.3s ease; /*transição*/
 }
 
 /* Trabalhando com a responsividade de telas */
@@ -42,84 +42,78 @@
 .you1 h1 {
     font-size: 50px !important; /* Ajuste conforme necessário */
 }
+
+@media (max-width: 768px) {
+    .class2 {
+        margin-top: 100px; /* Ajuste para mover a seção de botões para cima */
+    }
+    .escolha button {
+        width: 100%; /* Ajusta a largura dos botões para dispositivos menores */
+    }
+}
 /* Fim de trabalhando com a responsividade de telas */
 
 .class1 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
-    color: #fff;
+    display: flex; /*flex container*/
+    justify-content: center; /*deixa no centro*/
+    flex-direction: column; /*altera a direção dos items de cima para baixo*/
+    width: 80%; /*largura*/
+    margin: 0 auto; /*margin*/
+    color: #fff; /*cor*/
 }
 
 .class2 {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    display: flex; /*flex container*/
+    width: 100%; /*largura*/
+    justify-content: center; /*deixa no centro*/
+    align-items: center; /*alinha os items para o centro*/
     flex-direction: column; /* Alinha os botões verticalmente */
 }
 
 h1, p {
-    color: #fff;
-    font-family: sans-serif;
-}
-
-.botao1 button {
-    width: 80%;
-    cursor: pointer;
-    background-color: var(--laranja);
-    border-radius: 10px;
-    margin-top: 20px; /* Ajustado para diminuir o espaço */
-    font-size: 20px;
-    margin-top: 40%;
-    font-family: sans-serif;
-    margin-left: 10%;
-}
-
-.btn-primary {
-    border-color: var(--laranja);
+    color: #fff; /*cor*/
+    font-family: sans-serif; /*estilo de fonte*/
 }
 
 .form-control:focus {
-    color: #212529;
-    background-color: #ffffff00;
-    border-color: var(--laranja);
-    outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(13, 109, 253, 0);
-    color: #fff;
+    color: #212529; /*cor*/
+    background-color: #ffffff00; /*cor de fundo*/
+    border-color: var(--laranja); /*cor gravada*/
+    outline: 0; /*remove a borda*/
+    box-shadow: 0 0 0 .25rem rgba(13, 109, 253, 0); /*aplica uma sombra*/
+    color: #fff; /*cor*/
 }
 
 .conta {
-    font-size: 12px;
-    font-weight: 100;
-    font-family: inherit;
+    font-size: 12px; /*tamanho da fonte*/
+    font-weight: 100; /*afina a letra*/
+    font-family: inherit; /*estilo de fonte*/
     margin-top: 10px; /* Ajustado para ficar mais próximo */
 }
 
 .conta .linkRetorno {
-    color: var(--laranja);
-    text-decoration: none;
+    color: var(--laranja); /*cor gravada*/
+    text-decoration: none; /*tira o sublinhado*/
 }
 
 .escolha button {
-    background-color: #0000005d;
-    color: white;
-    font-family: sans-serif;
-    border: solid rgba(0, 0, 0, 0);
-    font-size: 20px;
-    width: 100%;
-    border-radius: 16px;
-    margin-bottom: 10px; /* Ajustado para ficar mais próximo */
+    background-color: #0000005d; /*cor de fundo*/
+    color: white; /*cor*/
+    font-family: sans-serif; /*estilo de fonte*/
+    border: solid rgba(0, 0, 0, 0); /*borda e outros*/
+    font-size: 20px; /*tamanho da fonte*/
+    width: 170%; /*largura*/
+    border-radius: 16px; /*tamanho da borda*/
+    margin-top: -1%; /*margin para cima*/
+    margin-bottom: 0; /*margin para baixo*/
 }
 
 .escolha button:hover {
-    background-color: #104C64;
+    background-color: #104C64; /*cor de fundo*/
 }
 
 .seta-esquerda {
     margin-bottom: 20px; /* Ajustado para ficar mais próximo */
-    margin-top: -40%;
-    font-size: 40px;
+    margin-top: -40%; /*margin para cima*/
+    font-size: 40px; /*tamanho da fonte*/
 }

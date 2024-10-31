@@ -1,104 +1,104 @@
   /* Fontes */
   @font-face {
-    font-family: "roboto";
-    src: url(/fontes/Roboto/Roboto-Regular.ttf);
+    font-family: "roboto"; /*estilo de fonte*/
+    src: url(/fontes/Roboto/Roboto-Regular.ttf); /*fonte*/
   
-    font-family: "montserrat";
-    src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-family: "montserrat"; /*fonte*/
+    src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf); /*fonte*/
   }
   
   /* Paleta de Cores */
   :root {
-    --azulEscuro: #0C1D25;
-    --azulClaro: #104C64;
-    --laranja: #BF4410;
+    --azulEscuro: #0C1D25; /*cor gravada*/
+    --azulClaro: #104C64; /*cor gravada*/
+    --laranja: #BF4410; /*cor gravada*/
   }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /*margin*/
+    padding: 0; /*espaço*/
+    box-sizing: border-box; /*faz com o que a altura e a largura de um elemento incluam o conteúdo, padding e borda, mantendo o tamanho total conforme definido*/
 }
 
 .tudo {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: grid; /*organiza e alinha elementos em linhas e colunas*/
+    grid-template-columns: 2fr 1fr; /*define o número e a largura das colunas em grid*/
     background-image: url('../imagens/fundoAzul.jpg'); /* Substitua 'fundo.jpg' pelo nome da sua imagem */
     background-size: cover; /* Faz a imagem cobrir todo o fundo */
     background-position: center; /* Centraliza a imagem */
-    height: 100vh;
+    height: 100vh; /*altura em vh*/
     filter: contrast(1.3) brightness(1.3) saturate(1.3) blur(-1px); /*deixa a imagem mais nítida, mais viva, com filtro e reduz os borrões.*/
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease; /*transição e filtro*/
 
 }
 
 .class1 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
-    color: #BF4410;
+    display: flex; /*flex container*/
+    justify-content: center; /*deixa no centro*/
+    flex-direction: column; /*altera a direção dos items de cima para baixo*/
+    width: 80%; /*largura*/
+    margin: 0 auto; /*margin*/
+    color: #BF4410; /*cor*/
 }
 
 .class1 .botaoCadastre {
-    width: 26%; 
-    border-radius: 10px;
-    background-color: var(--laranja);
-    color: white;
-    text-align: center;
-    height: 26px;
-    margin-bottom: 1%;
-    font-weight: bold;
+    width: 26%; /*largura*/
+    border-radius: 10px; /*tamanho da borda*/
+    background-color: var(--laranja); /*cor de fundo gravada*/
+    color: white; /*cor*/
+    text-align: center; /*alinha o texto para o centro*/
+    height: 26px; /*altura*/
+    margin-bottom: 1%; /*margin para baixo*/
+    font-weight: bold; /*fonte negrita*/
 }
 
 .class2 {
     background-color: rgba(0, 0, 0, 0.44); /* Ajuste a opacidade conforme necessário */
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    display: flex; /*flex container*/
+    width: 100%; /*largura*/
+    justify-content: center; /*deixa no centro*/
+    align-items: center; /*alinha os items para o centro*/
 }
 
 h1, p {
-    color: #fff;
-    font-family: sans-serif;
+    color: #fff; /*cor*/
+    font-family: sans-serif; /*estilo de fonte*/
 }
 
 .botao button {
 
-    width: 70%;
+    width: 70%; /*largura*/
     cursor: pointer; /* Altera o cursor ao passar sobre o botão */
     background-color: orangered; /* Opcional: cor de fundo ao passar o mouse */
-    margin-top: 50%;
-    border-radius: 10px;
-    margin-left: 19%;
-    font-size: 20px;
+    margin-top: 50%; /*margin para cima*/
+    border-radius: 10px; /*tamanho da borda*/
+    margin-left: 19%; /*margin para a esquerda*/
+    font-size: 20px; /* Tamanho de fonte ainda maior para parágrafos */
 }
 
 .botao button:hover { /* Opcional: cor de fundo ao passar o mouse */
-    border-color: orangered;
+    border-color: orangered; /*cor da borda*/
 }
 
 .btn-primary {
-    border-color: orangered;
+    border-color: orangered; /*cor da borda*/
 }
 
 .form-control {
     background-color: #ffffff00; /* background-clip: padding-box; */
-    border: none;
-    color: #fff;
-    border-bottom: 4px solid #ced4da;
+    border: none; /*sem borda*/
+    color: #fff; /*cor*/
+    border-bottom: 4px solid #ced4da; /*borda para baixo com tamanho e cor*/
 
 }
 
 .form-control:focus {
-    color: #212529;
-    background-color: #ffffff00;
-    border-color: orangered;
-    outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(13, 109, 253, 0);
-    color: #fff;
+    color: #212529; /*cor*/
+    background-color: #ffffff00; /*cor de fundo*/
+    border-color: orangered; /*cor da borda*/
+    outline: 0; /*remove a borda*/
+    box-shadow: 0 0 0 .25rem rgba(13, 109, 253, 0); /*aplica uma sombra*/
+    color: #fff; /*cor*/
 }
 
 .entrar {
@@ -106,11 +106,17 @@ h1, p {
 }
 
 .pergunta {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 30%;
-    margin-top: 2%;
-    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif; /*estilo de fonte*/
+    margin-left: 30%; /*margin para a esquerda*/
+    margin-top: 2%; /*margin para cima*/
+    font-size: 14px; /* Tamanho de fonte ainda menor para parágrafos */
 
+}
+
+.conta {
+
+   font-size: 13px; /* Tamanho de fonte ainda menor para parágrafos */
+   margin-left: 13%; /*margin para a esquerda*/
 }
 
 /* Trabalhando com a responsividade de telas */
@@ -137,10 +143,6 @@ h1, p {
     .botao button {
         font-size: 18px; /* Tamanho de fonte do botão */
     }
-
-    .pergunta {
-        font-size: 12px; /* Tamanho de fonte menor para a pergunta */
-    }
 }
 
 @media (max-width: 576px) {
@@ -154,20 +156,20 @@ h1, p {
 
     .pergunta p {
 
-        font-size: 14px;
+        font-size: 14px; /* Tamanho de fonte ainda menor para parágrafos */
 
     }
 
     .botao button {
         width: 90%; /* Botão ocupa mais espaço em telas muito pequenas */
-        margin-left: 13%;
+        margin-left: 13%; /*margin para a esquerda*/
 
     }
 
-    .pergunta {
-        font-size: 10px; /* Tamanho de fonte ainda menor para a pergunta */
-        text-align: center;
-        margin-left: 16%;
+    .conta {
+
+     margin-left: 18%; /*margin para a esquerda*/
+
     }
 }
 /* Fim de trabalhando com a responsividade de telas */
