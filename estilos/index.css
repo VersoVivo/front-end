@@ -259,7 +259,7 @@ nav {
 .tudo {
 
   margin-left: 26%; /*margin para a esqurda*/
-  margin-top: 20%; /*margin para cima*/
+  margin-top: 26%; /*margin para cima*/
 
 }
 
@@ -308,7 +308,7 @@ nav {
 .data1 {
 
   color: #BF4410; /*cor*/
-  margin-left: 88%; /*margin para a esquerda*/
+  margin-left: 100%; /*margin para a esquerda*/
   font-size: 20px; /*tamanho da fonte*/ 
   margin-top: -10%; /*margin para cima*/
 
@@ -317,7 +317,7 @@ nav {
 .data2 {
 
   color: #BF4410; /*cor*/
-  margin-left: 88%; /*margin para a esquerda*/
+  margin-left: 100%; /*margin para a esquerda*/
   font-size: 20px; /*tamanho da fonte*/
   margin-top: -10%; /*margin para cima*/
 }
@@ -325,7 +325,7 @@ nav {
 .data3 {
 
   color: #BF4410; /*cor*/
-  margin-left: 88%; /*margin para a esquerda*/
+  margin-left: 100%; /*margin para a esquerda*/
   font-size: 20px; /*tamanho da fonte*/
   margin-top: -10%; /*margin para cima*/
 }
@@ -397,15 +397,15 @@ nav {
 .loc1, .loc2, .loc3 {
   background-color: white; /* Fundo branco */
   width: 60%; /*largura do fundo*/
-  padding: 54px; /* Espaçamento interno opcional */
+  padding: 60px; /* Espaçamento interno opcional */
   border-radius: 20px; /* Arredondar os cantos opcional */
   margin-bottom: 10px; /* Espaçamento entre os elementos */
 }
 
 .img1, .img2, .img3 {
 
-  width: 110%; /*largura*/
-  margin-top: -6.4%; /*margin para cima*/
+  width: 100%; /*largura*/
+  margin-top: -8%; /*margin para cima*/
   margin-left: -8%; /*margin para a esquerda*/
 
 }
@@ -708,8 +708,8 @@ form.d-flex {
   }
 
   .button2 {
-   margin-top: -35%; /*margin para cima*/
-   margin-right: 4%; /*margin para a direita*/
+   margin-top: -26%; /*margin para cima*/
+   margin-right: -4%; /*margin para a direita*/
   }
 }
 

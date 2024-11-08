@@ -1,0 +1,354 @@
+/* Remove a formatação padrão do navegador */
+* {
+    margin: 0; /*margin zero*/
+    padding: 0; /*espaçamento zero*/
+  }
+  
+  /* Fontes */
+  @font-face {
+    font-family: "roboto"; /*estilo de fonte*/
+    src: url(/fontes/Roboto/Roboto-Regular.ttf); /*fontes*/
+  
+    font-family: "montserrat";
+    src: url(/fontes/Montserrat/Montserrat-VariableFont_wght.ttf); /*fontes*/
+  }
+  
+  /* html */
+  html {
+    height: 100%; /*altura*/
+  }
+  
+  .fonte-zero{
+    font-size: 0px; /*tamanho da fonte*/
+    padding: 0px; /*espaçamento*/
+    opacity: 0; /*opacidade zero*/
+    float: none; /*sem float*/
+    border: 0px; /*borda zero*/
+    display: none; /*sem display*/
+  }
+  
+  body {
+    background-color: #12313f; /*cor de fundo*/
+    overflow: hidden; /*tira a barra de rolagem horizontal*/
+    overflow-y: auto; /*coloca a barra de rolagem vertical*/
+    font-family: "roboto", "montserrat", sans-serif; /*fonte específica*/
+  }
+  /* Nav */
+  nav {
+    background-color: #0c1d2552; /*cor de fundo*/
+  }
+  
+  .navbar-nav .nav-link {
+    color: white; /*cor*/
+    font-size: 24px; /*tamanho da fonte*/
+    font-weight: lighter; /*afina a letra e outros*/
+    margin: 0 20px 0 0; /*margin com valores*/
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #929292; /*cor*/
+    text-decoration: underline; /*são posicionados abaixo e acima do texto*/
+  }
+  
+  /* Adiciona estilos que só afetam telas menores (mobile) */
+  @media (max-width: 768px) {
+  
+    /* Centralizar o conteúdo dentro do menu burguer */
+    .navbar-collapse {
+      background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+      text-align: center; /*alinha o texto para o centro*/
+      border-radius: 20px; /* Centraliza o conteúdo do menu */
+      padding: 20px; /*espaçamento*/
+      margin-top: -13%; /*margin para cima*/
+    }
+  
+    .navbar-nav {
+      margin: 0 auto; /* Certifica que os links estarão centralizados */
+    }
+  
+    .navbar-toggler {
+  
+      background-color: #bf451070; /*cor de fundo*/
+  
+    }
+  
+    .navbar-nav .nav-item {
+      margin-bottom: 6px; /* Espaço entre os itens do menu */
+    }
+  
+    /* Centralizar barra de pesquisa no mobile */
+    .search {
+      width: 56%; /*largura*/
+      margin-left: 7%; /*margin para a esquerda*/
+      margin-bottom: 20px; /* Ajusta o espaço inferior no mobile */
+    }
+  
+    .search-box {
+      display: flex; /*deixa certinho*/
+      justify-content: center; /* Centraliza a barra de pesquisa */
+    }
+  
+    .search-field {
+      width: 90%; /* Largura da barra de pesquisa no mobile */
+      max-width: 400px; /* Limite de largura para telas um pouco maiores */
+    }
+  
+    .search-box-icon {
+      margin-left: 10px; /*margin para a esquerda*/
+    }
+  }
+  
+  .barraOculta {
+    height: 100%; /*altura*/
+    width: 0; /*largura*/
+    position: fixed; /*posição*/
+    z-index: 1; /*altera a ordem padrão das camadas do html*/
+    top: 0; /*topo zero*/
+    left: 0; /*esquerda zero*/
+    background-color: #111; /*cor de fundo*/
+    overflow-x: hidden; /*tira a barra de rolagem horizontal*/
+    transition: 0.5s; /*transição*/
+    padding-top: 60px; /*espaçamento para cima*/
+  }
+  
+  .barraOculta a {
+    padding: 8px 8px 8px 32px; /*espaçamento*/
+    text-decoration: none; /*ele tira o sublinhado*/
+    font-size: 25px; /*tamanho da fonte*/
+    color: #818181; /*cor*/
+    display: block; /*deixa em bloco*/
+    transition: 0.3s; /*transição*/
+  }
+  
+  .barraOculta a:hover {
+    color: red; /*cor*/
+  }
+  
+  .barraOculta .fecharBarraOculta {
+    position: absolute; /*posição*/
+    top: 0; /*topo zero*/
+    right: 25px; /*direita*/
+    font-size: 36px; /*tamanho da fonte*/
+    margin-left: 50px; /*margin para a esquerda*/
+  }
+  
+  /* Responsividade - Barra Oculta */
+  @media screen and (max-height: 450px) {
+    .barraOculta {
+      padding-top: 15px; /*espaçamento para cima*/
+    }
+  
+    .barraOculta a {
+      font-size: 18px; /*tamanho da fonte*/
+    }
+  }
+  
+  
+  /* Barra de Pesquisa */
+  .search {
+    --input-line: white; /*cor gravada*/
+    --input-text-color: white; /*cor gravada*/
+    --input-text-hover-color: transparent; /*cor transparente gravada*/
+    --input-bg-color: #ffffff30; /*cor gravada*/
+    --search-max-width: 250px; /*máximo de largura da pesquisa*/
+    --search-min-width: 150px; /*mínimo de largura da pesquisa*/
+    --border-radius: 10px; /*tamanho da borda*/
+    --transition-cubic-bezier: 150ms cubic-bezier(0.4, 0, 0.2, 1); /*transição e outros*/
+  }
+  
+  .search-box {
+    max-width: var(--search-max-width); /*máximo de largura*/
+    min-width: var(--search-min-width); /*mínimo de largura*/
+    height: 35px; /*altura*/
+    border-radius: var(--border-radius); /*tamanho da borda gravada*/
+    padding: 5px 15px; /*espaçamento*/
+    background: var(--input-bg-color); /*cor de fundo gravada*/
+  }
+  /*Sessão do input*/
+  .search-field {
+    position: relative; /*posição*/
+    width: 100%; /*largura*/
+    height: 100%; /*altura*/
+    left: -5px; /*esquerda*/
+    margin-left: 1%; /*margin para a esquerda*/
+    --input-bg-color: #ffffff00; /*cor de fundo gravada*/
+    border: 0; /*borda zero*/
+  }
+  
+  .input {
+    width: calc(100% - 29px); /*largura e outros*/
+    height: 100%; /*altura*/
+    border: 0; /*borda zero*/
+    border-color: transparent; /*cor transparente*/
+    font-size: 1rem; /*tamanho da fonte*/
+    padding-right: 0px; /*espaçamento para a direita*/
+    color: var(--input-line); /*cor gravada*/
+    background: var(--input-bg-color); /*cor de fundo gravada*/
+    outline: none; /*remove o comportamento padrão do browser de adicionar uma borda a um elemento quando ele esta selecionado*/
+  }
+  /*Botão de pesquisa*/
+  .search-box-icon {
+    width: 52px; /*largura*/
+    height: 35px; /*altura*/
+    position: absolute; /*posição*/
+    top: -6px; /*topo*/
+    right: -21px; /*direita*/
+    background: transparent; /*cor transparente*/
+    border-bottom-right-radius: var(--border-radius); /*tamanho da borda abaixo para a direita*/
+    border-top-right-radius: var(--border-radius); /*tamanho da borda acima para a direita*/
+  }
+  
+  .btn-icon-content {
+    width: 52px; /*largura*/
+    height: 35px; /*altura*/
+    top: -6px; /*topo*/
+    right: -21px; /*direita*/
+    background: transparent; /*cor transparente*/
+    border: none; /*sem borda*/
+    cursor: pointer; /*ao passar o cursor*/
+    border-bottom-right-radius: var(--border-radius); /*tamanho da borda abaixo para a direita*/
+    border-top-right-radius: var(--border-radius); /*tamanho da borda acima para a direita*/
+    opacity: .4; /*opacidade*/
+  }
+  
+  .btn-icon-content:hover {
+    opacity: .8; /*opacidade*/
+  }
+  
+  .search-icon {
+    width: 21px; /*largura*/
+    height: 21px; /*altura*/
+    position: absolute; /*posição*/
+    top: 7px; /*topo*/
+    right: 15px; /*direita*/
+  }
+
+  .conta {
+    font-size: 12px; /* Ajustado para um pouco menor */
+    font-weight: 100; /*afina a letra*/
+    white-space: nowrap; /*quebra de texto*/
+    margin-left: 2%; /*margin para a esquerda*/
+    font-family: inherit; /*estilo de fonte*/
+    margin-top: 4%; /* Ajustado para ficar mais próximo */
+}
+
+.pesquisa input {
+    background-color: rgba(0, 0, 0, 0.363); /*cor de fundo*/
+    color: white; /*cor*/
+    border: solid rgba(0, 0, 0, 0); /*cor da borda*/
+    font-size: 15px; /* Ajustado para um pouco menor */
+    width: 20% !important; /*largura*/
+    font-family: sans-serif; /*estilo de fonte*/
+    border-radius: 16px; /*tamanho da borda*/
+    margin-bottom: 10px; /* Ajustado para ficar mais próximo */
+    height: 45px; /* Ajustado para um pouco menor */
+}
+
+.pesquisa p {
+    margin-bottom: 5px; /* Reduz a margem para juntar os campos */
+}
+
+.pesquisa {
+
+ margin-top: 20%; /*margin mais baixo*/
+
+}
+
+/* Footer */
+footer {
+    text-align: center; /*alinha o texto para o centro*/
+    bottom: 0; /*para baixo*/
+    width: 125%; /*largura*/
+    position: absolute; /*é posicionado em relação ao seu ponto original no fluxo normal da página*/
+    position: relative; /*é retirado do fluxo normal da página*/
+    margin-left: -13%; /*margin para a esquerda*/
+    z-index: 0; /*z-index: 0; Garantir que o conteúdo fique acima do footer */
+    /* Colocar atrás do conteúdo */
+  }
+  
+  .rodapeSuperior {
+    background-color:#0C1D25; /*cor de fundo*/
+    padding: 20px; /*espaço*/
+    margin: 0; /*margin*/
+  }
+  
+  .rodapeInferior {
+    background-color:#104C64; /*cor de fundo*/
+  }
+  
+  .rodapeInferior p {
+    color: white; /*cor*/
+    padding: 5px 0; /*espaço*/
+    margin: 0; /*margin*/
+  }
+  
+  /* Paleta de Cores */
+  :root {
+    --azulEscuro: #0C1D25; /*cor gravada*/
+    --azulClaro: #104C64; /*cor gravada*/
+  }
+  /* Fim do footer */
+
+   /* Estilos para telas maiores que 768px (desktop e tablets grandes) */
+   .class2 {
+    margin-left: 400px; /*margin à esquerda*/
+}
+
+.container {
+    padding: 10px; /*espaçamento*/
+}
+
+.form-control {
+    width: 60%; /* Manter a largura dos campos para desktop */
+}
+
+/* Responsivo para telas menores que 768px */
+@media (max-width: 768px) {
+  /* Remove o margin-left e ajusta o margin-right para telas menores */
+  .class2 {
+      margin-left: -62% !important; /*margin para esquerda*/
+      margin-top: 20%; /*margin para baixo*/
+  }
+
+  /* Adiciona padding ao contêiner para dar espaçamento */
+  .container {
+      padding: 5%; /* Espaçamento adicional nas laterais */
+  }
+
+  /* Faz com que o campo de entrada ocupe 100% da largura disponível */
+  .form-control {
+      width: 100% !important; /*largura*/
+  }
+
+  /* Garante que o campo de upload ocupe 100% também */
+  .form-control-file {
+      width: 100% !important; /*largura*/
+  }
+
+  /* O botão ocupa toda a largura disponível */
+  .btn {
+      width: 100%; /*largura*/
+  }
+
+  /* Espaçamento adequado entre os campos */
+  .form-group {
+      margin-bottom: 15px; /*margin para baixo ou cima*/
+  }
+
+  /* Ajuste no botão */
+  .btn-primary {
+      font-size: 16px; /* Tamanho de fonte ajustado */
+      padding: 12px 20px; /* Maior área de clique */
+  }
+
+  /* Ajuste para elementos com a classe mais_eventos */
+  .mais_eventos {
+      font-size: 3rem; /* Tamanho de fonte ajustado */
+      margin-left: 26% !important; /* Ajusta o margin-left */
+      white-space: nowrap; /* Evita que o texto quebre para a linha */
+  }
+
+  .search {
+    margin-left: 22%; /*margin à esquerda*/
+  }
+}

@@ -42,7 +42,7 @@
 
         <!-- Título entrar -->
         <div class="class2">
-            <form>
+            <form onsubmit="return validateForm(event)">
                 <div class="entrar">
                     <p style="font-size: 300%; text-align: center; color: orangered; font-weight: 100; font-family:inherit;">Entrar</p>
                 </div>
@@ -50,14 +50,41 @@
                     <span class="input-group-text" style="background: transparent; border: none;">
                         <i class="fas fa-user" style="color: rgba(190, 185, 185, 0.833); margin-left: 3%;"></i>
                     </span>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Usuário" style="font-size: 20px;" required>
+                    <input type="email" required="required" class="form-control" id="exampleInputEmail1" placeholder="Usuário" style="font-size: 20px">
                 </div>
                 <div class="mb-3 input-group">
                     <span class="input-group-text" style="background: transparent; border: none;">
                         <i class="fas fa-key" style="color: rgba(190, 185, 185, 0.833);"></i>
                     </span>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" style="font-size: 20px;" required>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" style="font-size: 20px" required="required">
                 </div>
+
+                <div class="error" id="error-message" style="color: red; text-align: center; font-size: 14px;"></div>
+
+
+                <!-- Funcionamento da permissão de usúario e senha -->
+                <script>
+                    function validateForm(event) {
+                        // Limpar qualquer mensagem de erro anterior
+                        document.getElementById('error-message').innerText = '';
+                
+                        // Obter os valores dos campos de email e senha
+                        const email = document.getElementById('exampleInputEmail1').value;
+                        const password = document.getElementById('exampleInputPassword1').value;
+                
+                        // Verificar se ambos os campos estão preenchidos
+                        if (email.trim() === '' || password.trim() === '') {
+                            // Mostrar mensagem de erro
+                            document.getElementById('error-message').innerText = 'Por favor, preencha tanto o e-mail quanto a senha.';
+                            event.preventDefault();  // Impede o envio do formulário
+                            return false;
+                        }
+                        // Permite o envio do formulário se ambos os campos estiverem preenchidos
+                        return true;
+                    }
+                </script>
+                <!-- Fim do funcionamento da permissão de usúario e senha -->
+
 
                 <!-- Link para o Font Awesome -->
                 <link rel="stylesheet"
