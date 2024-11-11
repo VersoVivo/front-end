@@ -23,7 +23,7 @@
 .tudo {
     display: grid; /*organiza e alinha elementos em linhas e colunas*/
     grid-template-columns: 2fr 1fr; /*define o número e a largura das colunas em grid*/
-    background-image: url('../imagens/fundoAzul.jpg'); /* Substitua 'fundo.jpg' pelo nome da sua imagem */
+    background-image: url('../imagens/cadastro.jpeg'); /* Substitua 'fundo.jpg' pelo nome da sua imagem */
     background-size: cover; /* Faz a imagem cobrir todo o fundo */
     background-position: center; /* Centraliza a imagem */
     height: 100vh; /*altura em vh*/

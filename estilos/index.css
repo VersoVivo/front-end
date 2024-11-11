@@ -779,3 +779,42 @@ footer {
   --azulClaro: #104C64; /*cor gravada*/
 }
 /* Fim do footer */
+
+/* Estilo do modal */
+.modal {
+  position: fixed; /*posição fixa*/
+  top: 0; /*topo*/
+  left: 0; /*esquerda*/
+  width: 100%; /*largura*/
+  height: 100%; /*altura*/
+  background-color: rgba(0, 0, 0, 0.8); /*cor de fundo*/
+  display: none; /* Inicialmente escondido */
+  justify-content: center; /*deixar no centro*/
+  align-items: center; /*alinhar para o centro*/
+  z-index: 1000; /*específica a ordem da pilha de um elemento do anúncio*/
+}
+
+.modal img {
+  max-width: 90%; /*max de largura*/
+  max-height: 90%; /*mx de altura*/
+  transition: all 0.3s ease;  /* Efeito de transição na imagem */
+}
+
+/* Estilo do botão de fechar */
+.close-modal {
+  position: absolute; /*posição*/
+  top: 20px; /*topo*/
+  right: 20px; /*direita*/
+  font-size: 30px; /*tamanho da fonte*/
+  color: white; /*cor*/
+  cursor: pointer; /*ao passar o cursor*/
+}
+
+/* Imagens pequenas */
+.batalha-imagem {
+  cursor: pointer; /*ao passar o cursor*/
+  transition: transform 0.3s ease; /*transição*/
+}
+
+
+
