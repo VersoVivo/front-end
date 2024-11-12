@@ -53,17 +53,7 @@
 
 
     <!-- Funcionamento dos botões de mc e organizador para entrar na página de login -->
-    <script>
-        document.getElementById("mc").addEventListener("click", function(event) {
-            event.preventDefault();
-            window.location.href = "login.html"; // Substitua "pagina_login.html" pelo nome correto do seu arquivo de login
-        });
     
-        document.getElementById("organizador").addEventListener("click", function(event) {
-            event.preventDefault();
-            window.location.href = "login.html"; // Substitua "pagina_login.html" pelo nome correto do seu arquivo de login
-        });
-    </script>
    <!-- Fim do funcionamento dos botões de mc e organizador para entrar na página de login -->
 
 
@@ -76,32 +66,43 @@
   <!-- JavaScript -->
   <script>
     //Salvar a escolha do usuário em uma variável com PHP
-    var mc, organizador, espectador;
+    var mc, organizador;
 
     mc = document.getElementById("mc");
     organizador = document.getElementById("organizador");
-    espectador = document.getElementById("espectador");
 
     mc.addEventListener("click", (Event) => {
         Event.preventDefault();
         mc.style.background = "#BF4410";
         organizador.style.background = "#0000005d";
-        espectador.style.background = "#0000005d";
     });
     organizador.addEventListener("click", (Event) => {
         Event.preventDefault();
         organizador.style.background = "#BF4410";
         mc.style.background = "#0000005d";
-        espectador.style.background = "#0000005d";
-    });
-    espectador.addEventListener("click", (Event) => {
-        Event.preventDefault();
-        espectador.style.background = "#BF4410";
-        mc.style.background = "#0000005d";
-        organizador.style.background = "#0000005d";
     });
   </script>
   <!-- Fim do JavaScript -->
+
+
+  <!-- Funcionamento dos botões de mc e organizador -->
+  <script>
+    mc.addEventListener("click", (Event) => {
+    Event.preventDefault();
+    mc.style.background = "#BF4410";
+    organizador.style.background = "#0000005d";
+    window.location.href = "login2_3.html"; // Redireciona para a página de login do MC
+});
+
+    organizador.addEventListener("click", (Event) => {
+    Event.preventDefault();
+    organizador.style.background = "#BF4410";
+    mc.style.background = "#0000005d";
+    window.location.href = "login.html"; // Redireciona para a página de login do Organizador
+});
+  </script>
+  <!-- Fim do funcionamento dos botões de mc e organizador -->
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
